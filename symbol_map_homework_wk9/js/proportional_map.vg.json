@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 500,
+  "title": "Average Temperatures Across Australian Weather Stations (2023)",
+  "projection": {"type": "equalEarth"},
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/main/symbol_map_homework_wk9/js/aus_states.topojson",
+        "format": {"type": "topojson", "feature": "collection"}
+      },
+      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/main/symbol_map_homework_wk9/data/weather_coord_data.csv"
+      },
+      "mark": {"type": "circle", "size": 70},
+      "encoding": {
+        "longitude": {"field": "longtitude", "type": "quantitative"},
+        "latitude": {"field": "lattitude", "type": "quantitative"},
+        "color": {
+          "field": "AverageTemperature",
+          "type": "quantitative",
+          "title": "Temperature",
+          "scale": {"scheme": "yelloworangered"},
+          "legend": {
+            "title": "Temperature (°C)",
+            "values": [5, 10, 15, 20, 25, 30],
+            "titleAnchor": "middle",
+            "titlePadding": 15
+          }
+        },
+        "tooltip": [
+            {"field": "officialnamestate", "type": "nominal", "title": "State:"},
+            {"field": "officialnamesuburb", "type": "nominal", "title": "Closest Suburb:"},
+            {"field": "AverageTemperature", "type": "quantitative", "title": "Average Temperature (°C):", "format": ".2f"}
+          ]
+      }
+    }
+  ],
+
+  "config": {
+    "title": {"fontSize": 17}
+  }
+}
