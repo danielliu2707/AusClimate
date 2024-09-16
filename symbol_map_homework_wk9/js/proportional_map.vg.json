@@ -16,6 +16,7 @@
             "Victoria",
             "Northern Territory",
             "Tasmania", 
+            "Western Australia",
             "Australian Capital Territory"
           ],
           "labels": [
@@ -26,6 +27,7 @@
             "Victoria",
             "Northern Territory",
             "Tasmania", 
+            "Western Australia",
             "ACT"
           ],
           "name": "Select State:"
@@ -47,7 +49,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/main/symbol_map_homework_wk9/data/weather_coord_data.csv"
+        "url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/main/symbol_map_homework_wk9/data/weather_final_map_data.csv"
       },
       "transform": [
         {"filter": "Country_selection == null || datum.officialnamestate == Country_selection"}
