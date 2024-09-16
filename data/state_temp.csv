@@ -11,195 +11,87 @@
 9,Australian Capital Territory,10,12.40790869516129
 10,Australian Capital Territory,11,16.296069558333333
 11,Australian Capital Territory,12,18.314225903225807
-12,New South Wales,1,23.29868293620493
-13,New South Wales,2,23.07296902873109
-14,New South Wales,3,21.83492597256926
-15,New South Wales,4,16.09832312355294
-16,New South Wales,5,11.325761333496319
-17,New South Wales,6,10.419370168131373
-18,New South Wales,7,10.18292863410186
-19,New South Wales,8,11.941368081830058
-20,New South Wales,9,15.94206282752941
-21,New South Wales,10,17.55852037196812
-22,New South Wales,11,20.579681148000002
-23,New South Wales,12,23.592429135658445
-24,"New South Wales,Queensland",1,30.22818322580645
-25,"New South Wales,Queensland",2,29.354143333333333
-26,"New South Wales,Queensland",3,28.36552639784946
-27,"New South Wales,Queensland",4,20.871629494444445
-28,"New South Wales,Queensland",5,14.217407537634408
-29,"New South Wales,Queensland",6,13.575495216666667
-30,"New South Wales,Queensland",7,13.372649376344087
-31,"New South Wales,Queensland",8,16.996708612903227
-32,"New South Wales,Queensland",9,21.41026378333333
-33,"New South Wales,Queensland",10,23.409096913978495
-34,"New South Wales,Queensland",11,26.544060366666663
-35,"New South Wales,Queensland",12,29.833559688172045
-36,"New South Wales,South Australia",1,27.465177741935484
-37,"New South Wales,South Australia",2,26.50018017857143
-38,"New South Wales,South Australia",3,23.573511048387097
-39,"New South Wales,South Australia",4,17.598659833333333
-40,"New South Wales,South Australia",5,13.449552387096775
-41,"New South Wales,South Australia",6,12.347687441666666
-42,"New South Wales,South Australia",7,10.864539025806451
-43,"New South Wales,South Australia",8,13.075829322580645
-44,"New South Wales,South Australia",9,18.62199336666667
-45,"New South Wales,South Australia",10,19.017899274193546
-46,"New South Wales,South Australia",11,23.1641115
-47,"New South Wales,South Australia",12,26.28829601612903
-48,"New South Wales,Victoria",1,23.02715523655914
-49,"New South Wales,Victoria",2,22.08751505952381
-50,"New South Wales,Victoria",3,19.85771069892473
-51,"New South Wales,Victoria",4,14.469977133333332
-52,"New South Wales,Victoria",5,9.897428458064516
-53,"New South Wales,Victoria",6,9.426412278222221
-54,"New South Wales,Victoria",7,8.179148807526882
-55,"New South Wales,Victoria",8,9.466402453763441
-56,"New South Wales,Victoria",9,13.635416833333334
-57,"New South Wales,Victoria",10,14.682419702150538
-58,"New South Wales,Victoria",11,19.62101867777778
-59,"New South Wales,Victoria",12,22.119673182795697
-60,Northern Territory,1,27.718570279341108
-61,Northern Territory,2,27.683358521656537
-62,Northern Territory,3,27.965384471173643
-63,Northern Territory,4,25.48054127358156
-64,Northern Territory,5,20.940220036032944
-65,Northern Territory,6,21.61217096117021
-66,Northern Territory,7,19.92108039423473
-67,Northern Territory,8,22.995359718771446
-68,Northern Territory,9,25.88813360141844
-69,Northern Territory,10,28.015992928620456
-70,Northern Territory,11,29.387226395035462
-71,Northern Territory,12,31.014069036032943
-72,"Northern Territory,Queensland",1,29.53176472580645
-73,"Northern Territory,Queensland",2,27.662357142857143
-74,"Northern Territory,Queensland",3,28.651757887096775
-75,"Northern Territory,Queensland",4,26.192937716666666
-76,"Northern Territory,Queensland",5,19.918222806451613
-77,"Northern Territory,Queensland",6,20.818214966666666
-78,"Northern Territory,Queensland",7,18.35763820967742
-79,"Northern Territory,Queensland",8,22.527362580645164
-80,"Northern Territory,Queensland",9,26.07769465
-81,"Northern Territory,Queensland",10,28.43566291935484
-82,"Northern Territory,Queensland",11,30.974048666666665
-83,"Northern Territory,Queensland",12,33.11587143548387
-84,"Northern Territory,South Australia,Western Australia",1,27.917779129032258
-85,"Northern Territory,South Australia,Western Australia",2,29.985808678571427
-86,"Northern Territory,South Australia,Western Australia",3,26.532429806451614
-87,"Northern Territory,South Australia,Western Australia",4,19.379083033333334
-88,"Northern Territory,South Australia,Western Australia",5,13.868048338709677
-89,"Northern Territory,South Australia,Western Australia",6,12.041583486666667
-90,"Northern Territory,South Australia,Western Australia",7,12.437336096774192
-91,"Northern Territory,South Australia,Western Australia",8,17.629338790322578
-92,"Northern Territory,South Australia,Western Australia",9,21.88276355
-93,"Northern Territory,South Australia,Western Australia",10,22.336462161290324
-94,"Northern Territory,South Australia,Western Australia",11,26.030818800000002
-95,"Northern Territory,South Australia,Western Australia",12,28.047550612903226
-96,"Northern Territory,Western Australia",1,27.745242161290324
-97,"Northern Territory,Western Australia",2,29.182150464285716
-98,"Northern Territory,Western Australia",3,30.122930096774194
-99,"Northern Territory,Western Australia",4,25.733784866666667
-100,"Northern Territory,Western Australia",5,19.99198312903226
-101,"Northern Territory,Western Australia",6,20.42503505
-102,"Northern Territory,Western Australia",7,18.772930306451613
-103,"Northern Territory,Western Australia",8,23.34104212903226
-104,"Northern Territory,Western Australia",9,27.006736333333333
-105,"Northern Territory,Western Australia",10,29.67807120967742
-106,"Northern Territory,Western Australia",11,31.047986383333335
-107,"Northern Territory,Western Australia",12,33.222156806451615
-108,Other Territories,1,25.32193089247312
-109,Other Territories,2,25.578372964285716
-110,Other Territories,3,25.803427354838707
-111,Other Territories,4,25.550555455555553
-112,Other Territories,5,25.14569888172043
-113,Other Territories,6,23.976041755555556
-114,Other Territories,7,23.109319032258064
-115,Other Territories,8,22.546460569892474
-116,Other Territories,9,22.956087944444445
-117,Other Territories,10,23.75739247311828
-118,Other Territories,11,24.21351842222222
-119,Other Territories,12,25.35286734408602
-120,Queensland,1,26.04523346808365
-121,Queensland,2,25.94657346473971
-122,Queensland,3,25.707347475840624
-123,Queensland,4,22.78436102651836
-124,Queensland,5,17.96204265241252
-125,Queensland,6,18.443155302457626
-126,Queensland,7,17.101777461543193
-127,Queensland,8,19.12305774464871
-128,Queensland,9,21.779947029025422
-129,Queensland,10,24.299223453902407
-130,Queensland,11,25.605112992019773
-131,Queensland,12,27.30375673844997
-132,South Australia,1,23.616317191233904
-133,South Australia,2,23.66467030669443
-134,South Australia,3,20.814569828583828
-135,South Australia,4,17.04580612406577
-136,South Australia,5,13.397666574092291
-137,South Australia,6,12.349194866113603
-138,South Australia,7,11.322557770027485
-139,South Australia,8,13.124231855518588
-140,South Australia,9,16.885858125052316
-141,South Australia,10,16.94767472927817
-142,South Australia,11,20.095904233557548
-143,South Australia,12,21.357130955590915
-144,"South Australia,Victoria",1,21.361974241935485
-145,"South Australia,Victoria",2,20.29548638392857
-146,"South Australia,Victoria",3,17.532538806451612
-147,"South Australia,Victoria",4,14.876694275
-148,"South Australia,Victoria",5,11.618795770967742
-149,"South Australia,Victoria",6,10.977180601666667
-150,"South Australia,Victoria",7,9.919568559677419
-151,"South Australia,Victoria",8,10.701020212903227
-152,"South Australia,Victoria",9,13.819229080000001
-153,"South Australia,Victoria",10,13.947021314516128
-154,"South Australia,Victoria",11,17.403569233333332
-155,"South Australia,Victoria",12,18.83519327419355
-156,"South Australia,Western Australia",1,23.93279270967742
-157,"South Australia,Western Australia",2,25.340065000000003
-158,"South Australia,Western Australia",3,22.543814612903226
-159,"South Australia,Western Australia",4,18.7958889
-160,"South Australia,Western Australia",5,14.858734032258065
-161,"South Australia,Western Australia",6,12.1178335
-162,"South Australia,Western Australia",7,12.681381838709678
-163,"South Australia,Western Australia",8,15.179365870967741
-164,"South Australia,Western Australia",9,19.706028
-165,"South Australia,Western Australia",10,18.779500161290322
-166,"South Australia,Western Australia",11,20.846028033333333
-167,"South Australia,Western Australia",12,22.708599774193548
-168,Tasmania,1,16.186326540552994
-169,Tasmania,2,15.522564111451247
-170,Tasmania,3,13.620974105529953
-171,Tasmania,4,12.309221546574074
-172,Tasmania,5,9.46631779966206
-173,Tasmania,6,8.7848234116409
-174,Tasmania,7,9.225718936620584
-175,Tasmania,8,8.84825904094895
-176,Tasmania,9,10.363544753102646
-177,Tasmania,10,10.302148371003584
-178,Tasmania,11,13.030902573862434
-179,Tasmania,12,14.582978094009215
-180,Victoria,1,20.154756069797944
-181,Victoria,2,19.199504746302985
-182,Victoria,3,17.17012774406239
-183,Victoria,4,13.723941139870329
-184,Victoria,5,10.1652303180771
-185,Victoria,6,9.42458599170784
-186,Victoria,7,8.791213649344913
-187,Victoria,8,9.561649663915277
-188,Victoria,9,12.623093687496336
-189,Victoria,10,12.846242900788727
-190,Victoria,11,16.4753903296337
-191,Victoria,12,18.326330481761786
-192,Western Australia,1,25.178554905508218
-193,Western Australia,2,25.86292293216532
-194,Western Australia,3,23.948200543264353
-195,Western Australia,4,18.537175235220126
-196,Western Australia,5,16.713632822306757
-197,Western Australia,6,12.485660118983228
-198,Western Australia,7,13.101639402343276
-199,Western Australia,8,15.663574931933455
-200,Western Australia,9,18.762332253825996
-201,Western Australia,10,21.442503839926964
-202,Western Australia,11,23.71222524255765
-203,Western Australia,12,25.03193393497667
+12,New South Wales,1,23.354618142017813
+13,New South Wales,2,23.11714829059496
+14,New South Wales,3,21.85947259378789
+15,New South Wales,4,16.10581852925754
+16,New South Wales,5,11.320614287097822
+17,New South Wales,6,10.419023755237045
+18,New South Wales,7,10.17082432089604
+19,New South Wales,8,11.941666864217574
+20,New South Wales,9,15.960422001933487
+21,New South Wales,10,17.569790866475564
+22,New South Wales,11,20.618010802784223
+23,New South Wales,12,23.62837072586633
+24,Northern Territory,1,27.708079297453313
+25,Northern Territory,2,27.70539352819549
+26,Northern Territory,3,27.9958721286927
+27,Northern Territory,4,25.466180599122808
+28,Northern Territory,5,20.905577140916808
+29,Northern Territory,6,21.566281440526314
+30,Northern Territory,7,19.877580536774193
+31,Northern Territory,8,22.973165551273343
+32,Northern Territory,9,25.880478831929825
+33,Northern Territory,10,28.00998295585738
+34,Northern Territory,11,29.39632240385965
+35,Northern Territory,12,31.036584543293717
+36,Queensland,1,26.065720387572156
+37,Queensland,2,25.956765671503756
+38,Queensland,3,25.722981569066214
+39,Queensland,4,22.793911963929826
+40,Queensland,5,17.96241576533786
+41,Queensland,6,18.442518530477194
+42,Queensland,7,17.09886467183701
+43,Queensland,8,19.13269872544652
+44,Queensland,9,21.796642365087717
+45,Queensland,10,24.31477501599321
+46,Queensland,11,25.627111372842105
+47,Queensland,12,27.33092044563667
+48,South Australia,1,23.616798475628816
+49,South Australia,2,23.670212884754562
+50,South Australia,3,20.81845988460992
+51,South Australia,4,17.044683375110132
+52,South Australia,5,13.390502290464687
+53,South Australia,6,12.334732305433187
+54,South Australia,7,11.321093558462413
+55,South Australia,8,13.131781713073753
+56,South Australia,9,16.89327582201175
+57,South Australia,10,16.953046121500638
+58,South Australia,11,20.10163272856094
+59,South Australia,12,21.370338061816117
+60,Tasmania,1,16.186326540552994
+61,Tasmania,2,15.522564111451247
+62,Tasmania,3,13.620974105529953
+63,Tasmania,4,12.309221546574074
+64,Tasmania,5,9.46631779966206
+65,Tasmania,6,8.7848234116409
+66,Tasmania,7,9.225718936620584
+67,Tasmania,8,8.84825904094895
+68,Tasmania,9,10.363544753102646
+69,Tasmania,10,10.302148371003584
+70,Tasmania,11,13.030902573862434
+71,Tasmania,12,14.582978094009215
+72,Victoria,1,20.154756069797944
+73,Victoria,2,19.199504746302985
+74,Victoria,3,17.17012774406239
+75,Victoria,4,13.723941139870329
+76,Victoria,5,10.1652303180771
+77,Victoria,6,9.42458599170784
+78,Victoria,7,8.791213649344913
+79,Victoria,8,9.561649663915277
+80,Victoria,9,12.623093687496336
+81,Victoria,10,12.846242900788727
+82,Victoria,11,16.4753903296337
+83,Victoria,12,18.326330481761786
+84,Western Australia,1,25.189808831580546
+85,Western Australia,2,25.871464292207794
+86,Western Australia,3,23.965241131712006
+87,Western Australia,4,18.564805696969696
+88,Western Australia,5,16.731254102669634
+89,Western Australia,6,12.520493170647859
+90,Western Australia,7,13.12877303016483
+91,Western Australia,8,15.695335419455962
+92,Western Australia,9,18.793963005903866
+93,Western Australia,10,21.475320746081504
+94,Western Australia,11,23.737718660397075
+95,Western Australia,12,25.057825274951966
