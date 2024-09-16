@@ -67,14 +67,14 @@
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/main/symbol_map_homework_wk9/js/aus_states.topojson",
+        "url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/main/js/aus_states.topojson",
         "format": {"type": "topojson", "feature": "collection"}
       },
       "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/main/symbol_map_homework_wk9/data/weather_final_map_data.csv"
+        "url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/main/data/weather_final_map_data.csv"
       },
       "transform": [
         {"filter": "datum.Month == Month_Select"},
