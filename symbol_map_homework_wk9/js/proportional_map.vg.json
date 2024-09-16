@@ -33,9 +33,9 @@
           }
         },
         "tooltip": [
-            {"field": "officialnamestate", "type": "nominal", "title": "State:"},
-            {"field": "officialnamesuburb", "type": "nominal", "title": "Closest Suburb:"},
-            {"field": "AverageTemperature", "type": "quantitative", "title": "Average Temperature (°C):", "format": ".2f"}
+            {"field": "officialnamestate", "type": "nominal", "title": "State"},
+            {"field": "officialnamesuburb", "type": "nominal", "title": "Closest Suburb"},
+            {"field": "AverageTemperature", "type": "quantitative", "title": "Average Temperature (°C)", "format": ".2f"}
           ]
       }
     }
