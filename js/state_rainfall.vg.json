@@ -1,0 +1,64 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "height": 500,
+    "title": "Statewise Contribution to Total Rainfall (2010-2023)",
+  
+    "data": {
+      "url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/main/data/state_rainfall_by_month.csv"
+    },
+  
+    "params": [
+      {
+        "name": "Month_Select",
+        "value": 1,
+        "bind": {
+          "input": "range",
+          "min": 1,
+          "max": 12,
+          "step": 1,
+          "name": "Month: "
+        }
+      }
+    ],
+  
+    "transform": [
+      {"filter": "datum.Month == Month_Select"},
+      {
+        "calculate": "round(datum.RainProportion, 2)",
+        "as": "RainProportionRounded"
+      }
+    ],
+  
+    "encoding": {
+      "theta": {"field": "RainProportionRounded", "type": "quantitative", "stack": true},
+      "radius": {"field": "RainProportionRounded", "scale": {"type": "sqrt", "zero": true, "rangeMin": 20}},
+      "color": {
+        "field": "officialnamestate",
+        "type": "nominal",
+        "scale": {
+          "domain": ["New South Wales", "Queensland", "South Australia", "Tasmania", "Territories", "Victoria", "Western Australia"],
+          "range": ["#77AADD", "#EE8866", "#EEDD88", "#99DDFF", "#FFAABB", "#BBCC33", "#DDDDDD"]
+        },
+        "legend": {
+              "title": "State",
+              "titleAnchor": "middle",
+              "titlePadding": 13
+              }
+      },
+      "tooltip": [
+              {"field": "officialnamestate", "type": "nominal", "title": "State"},
+              {"field": "RainProportion", "type": "nominal", "title": "Rain Contribution (%)", "format": ".2f"}
+            ]
+    },
+  
+    "layer": [
+      {
+        "mark": {"type": "arc", "innerRadius": 20, "stroke": "#fff"},
+        "encoding": {
+          "order": {"field": "RainProportionRounded", "sort": "descending"}
+        }
+      }
+    ]
+  }
+  
