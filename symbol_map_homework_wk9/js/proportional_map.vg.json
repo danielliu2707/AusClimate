@@ -2,9 +2,33 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
   "height": 500,
-  "title": "Average Temperatures Across Australian Weather Recordings (2023)",
+  "title": "Average Temperatures Across Australian Weather Recordings (2010-2023)",
 
   "params": [
+    {
+      "name": "Month_Select",
+      "value": 1,
+      "bind": {
+        "input": "range",
+        "min": 1,
+        "max": 12,
+        "step": 1,
+        "name": "Month: "
+      }
+    },
+
+    {
+      "name": "Temperature_Above",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 33,
+        "step": 1,
+        "name": "Minimum Temperature: "
+      }
+    },
+
     {"name": "Country_selection",
         "bind": {
           "input": "select",
@@ -33,6 +57,7 @@
           "name": "Select State:"
         }
         }
+
   ],
 
   "projection": {
@@ -52,6 +77,8 @@
         "url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/main/symbol_map_homework_wk9/data/weather_final_map_data.csv"
       },
       "transform": [
+        {"filter": "datum.Month == Month_Select"},
+        {"filter": "datum.AverageTemperature > Temperature_Above"},
         {"filter": "Country_selection == null || datum.officialnamestate == Country_selection"}
       ],
       "mark": {"type": "circle", "size": 70},
