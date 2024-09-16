@@ -2,8 +2,41 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
   "height": 500,
-  "title": "Average Temperatures Across Australian Weather Stations (2023)",
-  "projection": {"type": "equalEarth"},
+  "title": "Average Temperatures Across Australian Weather Recordings (2023)",
+
+  "params": [
+    {"name": "Country_selection",
+        "bind": {
+          "input": "select",
+          "options": [
+            null,
+            "Queensland",
+            "New South Wales",
+            "South Australia",
+            "Victoria",
+            "Northern Territory",
+            "Tasmania", 
+            "Australian Capital Territory"
+          ],
+          "labels": [
+            "Show All",
+            "Queensland",
+            "New South Wales",
+            "South Australia",
+            "Victoria",
+            "Northern Territory",
+            "Tasmania", 
+            "ACT"
+          ],
+          "name": "Select State:"
+        }
+        }
+  ],
+
+  "projection": {
+    "type": "equalEarth"
+    },
+
   "layer": [
     {
       "data": {
@@ -16,15 +49,25 @@
       "data": {
         "url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/main/symbol_map_homework_wk9/data/weather_coord_data.csv"
       },
+      "transform": [
+        {"filter": "Country_selection == null || datum.officialnamestate == Country_selection"}
+      ],
       "mark": {"type": "circle", "size": 70},
       "encoding": {
-        "longitude": {"field": "longtitude", "type": "quantitative"},
-        "latitude": {"field": "lattitude", "type": "quantitative"},
+        "longitude": {
+          "field": "longtitude",
+          "type": "quantitative"},
+        "latitude": {
+          "field": "lattitude",
+          "type": "quantitative"},
         "color": {
           "field": "AverageTemperature",
           "type": "quantitative",
           "title": "Temperature",
-          "scale": {"scheme": "yelloworangered"},
+          "scale": {
+            "scheme": "yelloworangered",
+            "domain": [0, 5, 10, 15, 20, 25, 30]
+          },
           "legend": {
             "title": "Temperature (°C)",
             "values": [5, 10, 15, 20, 25, 30],
@@ -32,11 +75,31 @@
             "titlePadding": 15
           }
         },
+        "size": {
+          "field": "TotalRainfall",
+          "type": "quantitative",
+          "legend": {
+            "title": "Total Rainfall (mm)",
+            "format": ".1s",
+            "titleAnchor": "middle",
+            "titlePadding": 13
+            },
+          "scale": {
+            "type": "threshold",
+            "domain": [0, 100, 1000, 2000, 3000],
+            "range": [10, 30, 60, 100]
+          }
+        },
         "tooltip": [
             {"field": "officialnamestate", "type": "nominal", "title": "State"},
             {"field": "officialnamesuburb", "type": "nominal", "title": "Closest Suburb"},
-            {"field": "AverageTemperature", "type": "quantitative", "title": "Average Temperature (°C)", "format": ".2f"}
-          ]
+            {"field": "AverageTemperature", "type": "quantitative", "title": "Average Temperature (°C)", "format": ".2f"},
+            {"field": "TotalRainfall", "type": "quantitative", "title": "Total Rainfall (mm)",
+            "format": ",.2f"}
+          ],
+        "opacity": {
+          "value": 0.7
+        }
       }
     }
   ],
