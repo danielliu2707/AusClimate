@@ -1,37 +1,36 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": "container",
-    "height": 500,
-    "title": "Change in Statewise Average Temperatures by Month (2023)",
-    "data": {"url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/main/data/state_temp.csv"},
-    "mark": "area",
-    "encoding": {
-      "x": {
-        "timeUnit": "month", "field": "Month",
-        "axis": {"domain": false, "format": "%B", "tickSize": 0}
-      },
-      "y": {
-        "aggregate": "sum", "field": "TemperatureMean",
-        "axis": null,
-        "stack": "center"
-      },
-      "color": {
-          "field": "officialnamestate",
-          "type": "nominal",
-          "scale": {
-            "domain": ["New South Wales", "Queensland", "South Australia", "Tasmania", "Territories", "Victoria", "Western Australia"],
-            "range": ["#77AADD", "#EE8866", "#EEDD88", "#99DDFF","#FFAABB", "#BBCC33", "#DDDDDD"]
-          },
-          "legend": {
-                "title": "State",
-                "titleAnchor": "middle",
-                "titlePadding": 13
-                }
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 500,
+  "title": "Change in Statewise Average Temperatures by Month (2023)",
+  "data": {"url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/main/data/state_temp.csv"},
+  "mark": "area",
+  "encoding": {
+    "x": {
+      "timeUnit": "month", "field": "Month",
+      "axis": {"domain": false, "format": "%B", "tickSize": 0}
+    },
+    "y": {
+      "aggregate": "sum", "field": "TemperatureMean",
+      "axis": null,
+      "stack": "center"
+    },
+    "color": {
+        "field": "officialnamestate",
+        "type": "nominal",
+        "scale": {
+        "domain": ["New South Wales", "Queensland", "South Australia", "Tasmania", "Territories", "Victoria", "Western Australia"],
+        "range": ["#79B1DA", "#F18A72", "#E5D48C", "#6BBAD7", "#C88E9F", "#B2C746", "#DDDDDD"]
         },
-      "tooltip": [
-                {"field": "officialnamestate", "type": "nominal", "title": "State"},
-                {"field": "TemperatureMean", "type": "nominal", "title": "Average Temperature (°C)", "format": ".2f"}
-              ]
-    }
+        "legend": {
+              "title": "State",
+              "titleAnchor": "middle",
+              "titlePadding": 13
+              }
+      },
+    "tooltip": [
+              {"field": "officialnamestate", "type": "nominal", "title": "State"},
+              {"field": "TemperatureMean", "type": "nominal", "title": "Average Temperature (°C)", "format": ".2f"}
+            ]
   }
-  
+}

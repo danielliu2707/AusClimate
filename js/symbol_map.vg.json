@@ -59,11 +59,6 @@
         }
 
   ],
-
-  "projection": {
-    "type": "equalEarth"
-    },
-
   "layer": [
     {
       "data": {
