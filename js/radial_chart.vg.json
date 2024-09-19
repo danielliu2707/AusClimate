@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": "container",
+  "width": 500,
   "height": 500,
   "title": "Statewise Contribution to Total Rainfall (2010-2023)",
 
@@ -27,6 +27,22 @@
     {
       "calculate": "round(datum.RainProportion, 2)",
       "as": "RainProportionRounded"
+    },
+    {
+      "calculate": "datum.officialnamestate === 'Queensland' ? datum.officialnamestate : ''",
+      "as": "StateName"
+    },
+    {
+      "calculate": "datum.officialnamestate === 'Queensland' ? 'is located in a tropical climate,' : ''",
+      "as": "Line1"
+    },
+    {
+      "calculate": "datum.officialnamestate === 'Queensland' ? 'causes heavy rainfall from December' : ''",
+      "as": "Line2"
+    },
+    {
+      "calculate": "datum.officialnamestate === 'Queensland' ? 'to April' : ''",
+      "as": "Line3"
     }
   ],
 
@@ -38,18 +54,18 @@
       "type": "nominal",
       "scale": {
         "domain": ["New South Wales", "Queensland", "South Australia", "Tasmania", "Territories", "Victoria", "Western Australia"],
-        "range": ["#79B1DA", "#F18A72", "#E5D48C", "#6BBAD7", "#C88E9F", "#B2C746", "#DDDDDD"]
+        "range": ["#3585bc", "#fe711a", "#856ef2", "#195f53", "#e685c8", "#97675d", "#2fc5d4"]
       },
       "legend": {
-            "title": "State",
-            "titleAnchor": "middle",
-            "titlePadding": 13
-            }
+        "title": "State",
+        "titleAnchor": "middle",
+        "titlePadding": 13
+      }
     },
     "tooltip": [
-            {"field": "officialnamestate", "type": "nominal", "title": "State"},
-            {"field": "RainProportion", "type": "nominal", "title": "Rain Contribution (%)", "format": ".2f"}
-          ]
+      {"field": "officialnamestate", "type": "nominal", "title": "State"},
+      {"field": "RainProportion", "type": "nominal", "title": "Rain Contribution (%)", "format": ".2f"}
+    ]
   },
 
   "layer": [
@@ -57,6 +73,70 @@
       "mark": {"type": "arc", "innerRadius": 20, "stroke": "#fff"},
       "encoding": {
         "order": {"field": "RainProportionRounded", "sort": "descending"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 10,
+        "fontSize": 11.5,
+        "fontStyle": "italic",
+        "color": "black"
+      },
+      "encoding": {
+        "text": {"field": "StateName"},
+        "x": {"value": 20},
+        "y": {"value": 20}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 10,
+        "fontSize": 11.5,
+        "fontStyle": "italic",
+        "color": "black"
+      },
+      "encoding": {
+        "text": {"field": "Line1"},
+        "x": {"value": 20},
+        "y": {"value": 40} 
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 10,
+        "fontSize": 11.5,
+        "fontStyle": "italic",
+        "color": "black"
+      },
+      "encoding": {
+        "text": {"field": "Line2"},
+        "x": {"value": 20},
+        "y": {"value": 60}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 10,
+        "fontSize": 11.5,
+        "fontStyle": "italic",
+        "color": "black"
+      },
+      "encoding": {
+        "text": {"field": "Line3"},
+        "x": {"value": 20},
+        "y": {"value": 80}
       }
     }
   ]

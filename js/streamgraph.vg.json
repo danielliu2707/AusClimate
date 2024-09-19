@@ -1,36 +1,110 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": "container",
+  "width": 575,
   "height": 500,
-  "title": "Change in Statewise Average Temperatures by Month (2023)",
+  "title": {"text": "Change in Statewise Average Temperatures by Month (2023)", "dy": -30, "font": "Roboto"},
   "data": {"url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/main/data/state_temp.csv"},
-  "mark": "area",
-  "encoding": {
-    "x": {
-      "timeUnit": "month", "field": "Month",
-      "axis": {"domain": false, "format": "%B", "tickSize": 0}
-    },
-    "y": {
-      "aggregate": "sum", "field": "TemperatureMean",
-      "axis": null,
-      "stack": "center"
-    },
-    "color": {
-        "field": "officialnamestate",
-        "type": "nominal",
-        "scale": {
-        "domain": ["New South Wales", "Queensland", "South Australia", "Tasmania", "Territories", "Victoria", "Western Australia"],
-        "range": ["#79B1DA", "#F18A72", "#E5D48C", "#6BBAD7", "#C88E9F", "#B2C746", "#DDDDDD"]
+  "layer": [
+    {
+      "mark": "area",
+      "encoding": {
+        "x": {
+          "timeUnit": "month", "field": "Month",
+          "axis": {"domain": false, "format": "%B", "tickSize": 0, "grid": false, "title": "Month","titleFont": "Roboto"}
         },
-        "legend": {
-              "title": "State",
-              "titleAnchor": "middle",
-              "titlePadding": 13
-              }
+        "y": {
+          "aggregate": "sum", "field": "TemperatureMean",
+          "axis": null,
+          "stack": "center"
+        },
+        "color": {
+          "field": "officialnamestate",
+          "type": "nominal",
+          "scale": {
+            "domain": ["New South Wales", "Queensland", "South Australia", "Tasmania", "Territories", "Victoria", "Western Australia"],
+            "range": ["#3585bc", "#fe711a", "#856ef2", "#195f53", "#e685c8", "#97675d", "#2fc5d4"]
+          },
+          "legend": {
+            "title": "",
+            "orient": "top",
+            "labelFont": "Roboto",
+            "labelFontSize": 11
+          }
+        },
+        "tooltip": [
+          {"field": "officialnamestate", "type": "nominal", "title": "State"},
+          {"field": "TemperatureMean", "type": "nominal", "title": "Average Temperature (°C)", "format": ".2f"}
+        ]
+      }
+    },
+    {
+  "layer": [
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 7,
+        "dy": -5,
+        "color": "black",
+        "fontSize": 12, 
+        "fontWeight": 100,
+        "font": "Roboto"
       },
-    "tooltip": [
-              {"field": "officialnamestate", "type": "nominal", "title": "State"},
-              {"field": "TemperatureMean", "type": "nominal", "title": "Average Temperature (°C)", "format": ".2f"}
-            ]
-  }
+      "encoding": {
+        "x": {"value": 200},
+        "y": {"value": 30},
+        "text": {"value": "July was the coldest month across Australia,"},
+        "color": {"value": "grey"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 7,
+        "dy": 10,
+        "color": "black",
+        "fontSize": 12, 
+        "fontWeight": 100,
+        "font": "Roboto"
+      },
+      "encoding": {
+        "x": {"value": 200},
+        "y": {"value": 30},
+        "text": {"value": "with an average temperature of 12.76°C "},
+        "color": {"value": "grey"}
+      }
+    }
+  ]
+}
+,
+    {
+      "mark": "rule",
+      "encoding": {
+        "x": {"value": 310},
+        "x2": {"value": 310},
+        "y": {"value": 60},
+        "y2": {"value": 130},
+        "color": {"value": "grey"},
+        "strokeWidth": {"value": 2}
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "shape": "triangle",
+        "color": "grey",
+        "size": 75,
+        "angle": 180
+      },
+      "encoding": {
+        "x": {"value": 310},
+        "y": {"value": 130}
+      }
+    }
+
+  ]
 }

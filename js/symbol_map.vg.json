@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": "container",
+  "width": 1300,
   "height": 500,
   "title": "Average Temperatures Across Australian Weather Recordings (2010-2023)",
 
