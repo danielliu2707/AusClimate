@@ -1,0 +1,95 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "title": "Average Temperature vs Average Rainfall by State",
+    "data": {
+      "url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/main/data/state_temp_rain_humid.csv"
+    },
+
+    "layer": [
+    {"mark": "circle",
+    "encoding": {
+        "size": {
+          "legend": {"orient": "bottom"},
+        "field": "RelativeHumidityMean",
+        "title": "Average Humidity (%)",
+        "type": "quantitative",
+        "scale": {
+        "type": "threshold",
+        "domain": [40, 50, 60, 70, 80],
+        "range": [50, 150, 250, 400, 450, 600]
+        }},
+        
+      "x": {
+        "field": "TemperatureMean",
+        "title": "Average Temperature",
+        "type": "quantitative",
+        "axis": { "tickCount": 8},
+        "scale": {"domain":[5, 35]}
+      },
+      "y": {
+        "field": "RainProportion",
+        "type": "quantitative",
+        "title": "Average Rainfall",
+        "axis": {"tickCount": 6},
+        "scale": {"domain":[0, 50]}
+      } ,
+      
+      "color": {
+                "field": "officialnamestate",
+                "type": "nominal",
+                "scale": {
+                  "domain": ["New South Wales", "Queensland", "South Australia", "Tasmania", "Territories", "Victoria", "Western Australia"],
+                  "range": ["#3585bc", "#fe711a", "#856ef2", "#195f53", "#e685c8", "#97675d", "#2fc5d4"]
+                },
+                "legend": {
+                  "title": "",
+                  "orient": "top",
+                  "labelFont": "Roboto",
+                  "labelFontSize": 11
+                }
+              },
+      "opacity": { "value": 0.6}
+        }
+    },
+
+    {
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "baseline": "middle",
+          "dx": 0,
+          "fontSize": 11.5,
+          "fontStyle": "italic"
+        },
+  
+        "encoding": {
+          "text": {"field": "officialnamestate", "type": "nominal"},
+          "x": {"field": "TemperatureMean", "type": "quantitative"}, 
+          "y": {"field": "RainProportion", "type": "quantitative"}, 
+          
+            "color": {"value": "black"},
+            "opacity": {
+              "condition": {
+                "test": "datum.officialnamestate == 'Queensland'& datum.officialnamestate == 'Queensland'",
+                "value": 1
+              },
+              "value": 0
+            },
+            
+            "tooltip": [
+              {"field": "officialnamestate", "type": "nominal", "title": "State"},
+              {"field": "Month","title": "Month", "type": "quantitative", "format": ","},
+              {"field": "TemperatureMean", "title": "Temperature ", "type": "quantitative", "format": ".2f"},
+              {"field": "RainProportion" , "title": "Rainfall", "type": "quantitative", "format": ".2f"},
+              {"field": "RelativeHumidityMean" , "title": "Humidity", "type": "quantitative", "format": ".2f"}
+              ]
+        }
+      }
+    ],
+    "config": {
+      "title": {"fontSize": 15},
+      "legend": {"orient": "top"}
+    }
+    
+}
