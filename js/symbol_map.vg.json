@@ -25,7 +25,7 @@
         "min": 0,
         "max": 33,
         "step": 1,
-        "name": "Min Temperature: "
+        "name": "Minimum Temperature: "
       }
     },
 
