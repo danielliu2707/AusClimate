@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 580,
   "height": 350,
-  "title": {"text": "Average Temperature vs Average Rainfall by State (2023)", "dy": -30, "font": "Roboto"},
+  "title": {"text": "Average Temperature vs Proportional Rainfall by State (2023)", "dy": -30, "font": "Roboto"},
   "data": {
     "url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/main/data/state_temp_rain_humid.csv"
   },
@@ -15,7 +15,7 @@
         "min": 5,
         "max": 33,
         "step": 1,
-        "name": "Minimum Temperature (°C): "
+        "name": "Min Temperature (°C): "
       }
     },
     {
@@ -26,7 +26,7 @@
         "min": 0,
         "max": 50,
         "step": 1,
-        "name": "Minimum Rainfall (mm): "
+        "name": "Min Rainfall (%): "
       }
     },
     {
@@ -37,7 +37,7 @@
         "min": 35,
         "max": 80,
         "step": 1,
-        "name": "Minimum Humidity (%): "
+        "name": "Min Humidity (%): "
       }
     }
   ],
@@ -46,11 +46,11 @@
     {"filter": "datum.RainProportion > Rainfall_Above"},
     {"filter": "datum.RelativeHumidityMean > Humidity_Above"},
     {
-      "calculate": "datum.officialnamestate === 'Queensland' ? 'January in Queensland saw the heaviest rainfall across' : ''",
+      "calculate": "datum.officialnamestate === 'Queensland' ? 'January in Queensland saw heavy rainfall that' : ''",
       "as": "Line1"
     },
     {
-      "calculate": "datum.officialnamestate === 'Queensland' ? 'Australia, with an average daily rainfall of 46.90 mm' : ''",
+      "calculate": "datum.officialnamestate === 'Queensland' ? 'constituted 49.60% of all rainfall across Australia in January' : ''",
       "as": "Line2"
     }
   ],
@@ -79,7 +79,7 @@
         "y": {
           "field": "RainProportion",
           "type": "quantitative",
-          "title": "Average Rainfall",
+          "title": "Proportional Rainfall",
           "axis": {"tickCount": 6},
           "scale": {"domain": [0, 50]}
         },
