@@ -4,6 +4,16 @@
   "height": 500,
   "title": {"text": "Change in Statewise Average Temperatures by Month (2023)", "dy": -30, "font": "Roboto"},
   "data": {"url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/main/data/state_temp.csv"},
+  "transform": [
+    {
+      "calculate": "datum.officialnamestate === 'Queensland' ? 'July was the coldest month across Australia,' : ''",
+      "as": "Line1"
+    },
+    {
+      "calculate": "datum.officialnamestate === 'Queensland' ? 'with an average temperature of 12.76°C' : ''",
+      "as": "Line2"
+    }
+  ],
   "layer": [
     {
       "mark": "area",
@@ -44,18 +54,23 @@
         "type": "text",
         "align": "left",
         "baseline": "middle",
-        "dx": 7,
-        "dy": -5,
-        "color": "black",
-        "fontSize": 12, 
-        "fontWeight": 100,
-        "font": "Roboto"
+        "dx": 10,
+        "fontSize": 11,
+        "fontStyle": "italic",
+        "color": "grey"
       },
       "encoding": {
-        "x": {"value": 200},
-        "y": {"value": 30},
-        "text": {"value": "July was the coldest month across Australia,"},
-        "color": {"value": "grey"}
+        "text": {"field": "Line1"},
+        "color": {"value": "gray"},
+        "opacity": {
+          "condition": {
+            "test": "datum['officialnamestate'] == 'New South Wales' && datum['Month'] == '1'",
+            "value": 1
+          },
+          "value": 0.3
+        },
+        "x": {"value": 195},
+        "y": {"value": 30}
       }
     },
     {
@@ -63,18 +78,23 @@
         "type": "text",
         "align": "left",
         "baseline": "middle",
-        "dx": 7,
-        "dy": 10,
-        "color": "black",
-        "fontSize": 12, 
-        "fontWeight": 100,
-        "font": "Roboto"
+        "dx": 10,
+        "fontSize": 11,
+        "fontStyle": "italic",
+        "color": "grey"
       },
       "encoding": {
-        "x": {"value": 200},
-        "y": {"value": 30},
-        "text": {"value": "with an average temperature of 12.76°C "},
-        "color": {"value": "grey"}
+        "text": {"field": "Line2"},
+        "color": {"value": "gray"},
+        "opacity": {
+          "condition": {
+            "test": "datum['officialnamestate'] == 'New South Wales' && datum['Month'] == '1'",
+            "value": 1
+          },
+          "value": 0.3
+        },
+        "x": {"value": 195},
+        "y": {"value": 45}
       }
     }
   ]
