@@ -43,15 +43,15 @@
         var spec2 = "js/radial_chart.vg.json";
         var spec3 = "js/streamgraph.vg.json";
 
-        vegaEmbed("#symbol_map", spec1, {actions: false}).then(function (result) {
+        vegaEmbed("#symbol_map", spec1, {renderer: "svg"}).then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
 
-        vegaEmbed("#radial_chart", spec2, {actions: false}).then(function (result) {
+        vegaEmbed("#radial_chart", spec2, {renderer: "svg"}).then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
 
-        vegaEmbed("#streamgraph", spec3, {actions: false}).then(function (result) {
+        vegaEmbed("#streamgraph", spec3, {renderer: "svg"}).then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
     </script>
