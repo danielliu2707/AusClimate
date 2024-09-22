@@ -67,7 +67,7 @@
             "test": "datum['officialnamestate'] == 'New South Wales' && datum['Month'] == '1'",
             "value": 1
           },
-          "value": 0.3
+          "value": 0.2
         },
         "x": {"value": 195},
         "y": {"value": 30}
@@ -91,7 +91,7 @@
             "test": "datum['officialnamestate'] == 'New South Wales' && datum['Month'] == '1'",
             "value": 1
           },
-          "value": 0.3
+          "value": 0.2
         },
         "x": {"value": 195},
         "y": {"value": 45}

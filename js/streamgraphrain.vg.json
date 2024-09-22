@@ -1,0 +1,133 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 575,
+    "height": 500,
+    "title": {"text": "Change in Statewise Average Rainfall by Month (2023)", "dy": -30, "font": "Roboto"},
+    "data": {"url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/refs/heads/main/data/state_rainfall.csv"},
+    "transform": [
+      {
+        "calculate": "datum.officialnamestate === 'Queensland' ? 'January was the wettest month across Australia, with the' : ''",
+        "as": "Line1"
+      },
+      {
+        "calculate": "datum.officialnamestate === 'Queensland' ? 'Queensland floods contributing an average daily rainfall of 7.28 mm' : ''",
+        "as": "Line2"
+      }
+    ],
+    "layer": [
+      {
+        "mark": "area",
+        "encoding": {
+          "x": {
+            "timeUnit": "month", "field": "Month",
+            "axis": {"domain": false, "format": "%B", "tickSize": 0, "grid": false, "title": "Month","titleFont": "Roboto"}
+          },
+          "y": {
+            "aggregate": "sum", "field": "RainSum",
+            "axis": null,
+            "stack": "center"
+          },
+          "color": {
+            "field": "officialnamestate",
+            "type": "nominal",
+            "scale": {
+              "domain": ["New South Wales", "Queensland", "South Australia", "Tasmania", "Territories", "Victoria", "Western Australia"],
+              "range": ["#3585bc", "#fe711a", "#856ef2", "#195f53", "#e685c8", "#97675d", "#2fc5d4"]
+            },
+            "legend": {
+              "title": "",
+              "orient": "top",
+              "labelFont": "Roboto",
+              "labelFontSize": 11
+            }
+          },
+          "tooltip": [
+            {"field": "officialnamestate", "type": "nominal", "title": "State"},
+            {"field": "RainSum", "type": "nominal", "title": "Average Temperature (°C)", "format": ".2f"}
+          ]
+        }
+      },
+      {
+    "layer": [
+      {
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "baseline": "middle",
+          "dx": 10,
+          "fontSize": 11,
+          "fontStyle": "italic",
+          "color": "grey"
+        },
+        "encoding": {
+          "text": {"field": "Line1"},
+          "color": {"value": "gray"},
+          "opacity": {
+            "condition": {
+              "test": "datum['officialnamestate'] == 'New South Wales' && datum['Month'] == '1'",
+              "value": 1
+            },
+            "value": 0.2
+          },
+          "x": {"value": 175},
+          "y": {"value": 30}
+        }
+      },
+      {
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "baseline": "middle",
+          "dx": 10,
+          "fontSize": 11,
+          "fontStyle": "italic",
+          "color": "grey"
+        },
+        "encoding": {
+          "text": {"field": "Line2"},
+          "color": {"value": "gray"},
+          "opacity": {
+            "condition": {
+              "test": "datum['officialnamestate'] == 'New South Wales' && datum['Month'] == '1'",
+              "value": 1
+            },
+            "value": 0.2
+          },
+          "x": {"value": 175},
+          "y": {"value": 45}
+        }
+      }
+    ]
+  }
+  ,
+      {
+        "mark": "rule",
+        "encoding": {
+          "x": {"value": 160},
+          "x2": {"value": 70},
+          "y": {"value": 40},
+          "y2": {"value": 40},
+          "color": {"value": "grey"},
+          "strokeWidth": {"value": 1}
+        }
+      },
+      {
+        "mark": {
+          "type": "point",
+          "filled": true,
+          "shape": "triangle",
+          "color": "grey",
+          "size": 75,
+          "angle": 180
+        },
+        "encoding": {
+          "x": {"value": 70},
+          "y": {"value": 40},
+          "angle": {"value": 36}
+  
+        }
+      }
+  
+    ]
+  }
+  
