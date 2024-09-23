@@ -23,9 +23,16 @@
         </div>
 
         <div class="pure-g">
-            <div class="pure-u-1-1">
+            <div class="pure-u-1-2">
                 <!-- Embedding of symbol map into webpage -->
                 <div id="donut_chart_rain" class="donut-chart-rain-container"></div>
+            </div>
+        </div>
+
+        <div class="pure-g">
+            <div class="pure-u-1-2">
+                <!-- Embedding of symbol map into webpage -->
+                <div id="donut_chart_temp" class="donut-chart-temp-container"></div>
             </div>
         </div>
 
@@ -65,28 +72,33 @@
         var spec4 = "js/scatterplot.vg.json";
         var spec5 = "js/stream_graph_rain.vg.json";
         var spec6 = "js/donut_chart_rain.vg.json";
+        var spec7 = "js/donut_chart_temp.vg.json";
 
-        vegaEmbed("#symbol_map", spec1).then(function (result) {
+        vegaEmbed("#symbol_map", spec1, {actions: false}).then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
 
-        vegaEmbed("#radial_chart", spec2).then(function (result) {
+        vegaEmbed("#radial_chart", spec2, {actions: false}).then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
 
-        vegaEmbed("#stream_graph_temp", spec3).then(function (result) {
+        vegaEmbed("#stream_graph_temp", spec3, {actions: false}).then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
 
-        vegaEmbed("#scatterplot", spec4).then(function (result) {
+        vegaEmbed("#scatterplot", spec4, {actions: false}).then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
 
-        vegaEmbed("#stream_graph_rain", spec5).then(function (result) {
+        vegaEmbed("#stream_graph_rain", spec5, {actions: false}).then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
 
-        vegaEmbed("#donut_chart_rain", spec6).then(function (result) {
+        vegaEmbed("#donut_chart_rain", spec6, {actions: false}).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        vegaEmbed("#donut_chart_temp", spec7, {actions: false}).then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
     </script>
