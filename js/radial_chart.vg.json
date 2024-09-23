@@ -3,7 +3,6 @@
   "width": 500,
   "height": 500,
   "title": "Statewise Contribution to Total Rainfall (2010-2023)",
-
   "data": {
     "url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/main/data/state_rainfall_by_month.csv"
   },
