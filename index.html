@@ -1,38 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Load title in browser -->
+    <title>>🌦️ Australian Climate Overview 🌦️</title>
+
     <!-- Import Vega & Vega-Lite -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 
-    <!-- Import Pure.css -->
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css">
+    <!-- Import pure.css -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+        integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
     <!-- CSS file -->
-    <link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
+    <link rel="stylesheet" href="css/styles.css">
+    
 </head>
+
 <body>
+
     <div class="page">
+
+        <!-- Embedding main banner -->
         <div class="pure-g">
-            <div class="pure-u-1-1">
-                <!-- Embedding of symbol map into webpage -->
-                <div id="symbol_map" class="symbol-map-container"></div>
+            <div class="pure-u-1">
+                <div class="banner-container">
+                    <img src="../img/banner3.svg" class="banner">
+                </div>
+                <p class="centered-paragraph">
+                    Insert description text.
+                </p>
+            </div>
+        </div>
+
+        <!-- Embedding of symbol map -->
+        <div class="pure-g">
+            <div class="pure-u-2-3">
+                <!-- Embedding of symbol map into webpage with 2/3rd space -->
+                <div id="symbol_map" class="visualisation-container"></div>
+            </div>
+
+            <div class="pure-u-1-3">
+                <!-- Embedding of text for symbol map into webpage with 1/3rd space -->
+                <div class="description description-left">
+                    <h2>Temperature Records</h2>
+                    <p>Insert 
+                    <br><br>
+                    Temperature.
+                    <br><br>
+                    Text Here.
+                  </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="pure-g">
+            <div class="pure-u-1-2">
+              <div class="description description-left">
+                <h2>Insert Title Here</h2>
+                <p>Insert Text Here</p>
+              </div>
+            </div>
+            <div class="pure-u-1-2"> <!-- Add a new column for description-right -->
+              <div class="description description-right">
+                <h2><br></h2> 
+                <p>Insert Text <span class = "highlight-africa">Including Highlighted</span>Here.</p>
+              </div>
+            </div>
+            <div class="pure-u-1-2">
+              <div id="row_multiple_mortality" class="vis-container-long"></div>
             </div>
         </div>
 
         <div class="pure-g">
             <div class="pure-u-1-2">
                 <!-- Embedding of symbol map into webpage -->
-                <div id="donut_chart_rain" class="donut-chart-rain-container"></div>
+                <div id="donut_chart_rain" class="visualisation-container"></div>
             </div>
         </div>
 
         <div class="pure-g">
             <div class="pure-u-1-2">
                 <!-- Embedding of symbol map into webpage -->
-                <div id="donut_chart_temp" class="donut-chart-temp-container"></div>
+                <div id="donut_chart_temp" class="visualisation-container"></div>
             </div>
         </div>
 
@@ -41,25 +96,19 @@
                 <!-- Content for the first column -->
                 <p>Column 1</p>
                 <!-- Embedding of radial chart -->
-                <div id="stream_graph_rain" class="stream-graph-rain-container"></div>
+                <div id="stream_graph_rain" class="visualisation-container"></div>
             </div>
             <div class="pure-u-1-2">
                 <!-- Content for the second column -->
                 <p>Column 2</p>
-                <div id="stream_graph_temp" class="stream-graph-temp-container"></div>
+                <div id="stream_graph_temp" class="visualisation-container"></div>
             </div>
         </div>
         <div class="pure-g">
             <div class="pure-u-1-2">
-                <p>Column 1</p>
-                <!-- Embedding of symbol map into webpage -->
-                <div id="radial_chart" class="radial-chart-container"></div>
-            </div>
-
-            <div class="pure-u-1-2">
                 <p>Column 2</p>
                 <!-- Embedding of symbol map into webpage -->
-                <div id="scatterplot" class="scatterplot-container"></div>
+                <div id="scatterplot" class="visualisation-container"></div>
             </div>
         </div>
     </div>
@@ -67,38 +116,33 @@
     <!-- Renders visualizations into HTML elements -->
     <script type="text/javascript">
         var spec1 = "js/symbol_map.vg.json";
-        var spec2 = "js/radial_chart.vg.json";
-        var spec3 = "js/stream_graph_temp.vg.json";
-        var spec4 = "js/scatterplot.vg.json";
-        var spec5 = "js/stream_graph_rain.vg.json";
-        var spec6 = "js/donut_chart_rain.vg.json";
-        var spec7 = "js/donut_chart_temp.vg.json";
+        var spec2 = "js/stream_graph_temp.vg.json";
+        var spec3 = "js/scatterplot.vg.json";
+        var spec4 = "js/stream_graph_rain.vg.json";
+        var spec5 = "js/donut_chart_rain.vg.json";
+        var spec6 = "js/donut_chart_temp.vg.json";
 
         vegaEmbed("#symbol_map", spec1, {actions: false}).then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
 
-        vegaEmbed("#radial_chart", spec2, {actions: false}).then(function (result) {
+        vegaEmbed("#stream_graph_temp", spec2, {actions: false}).then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
 
-        vegaEmbed("#stream_graph_temp", spec3, {actions: false}).then(function (result) {
+        vegaEmbed("#scatterplot", spec3, {actions: false}).then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
 
-        vegaEmbed("#scatterplot", spec4, {actions: false}).then(function (result) {
+        vegaEmbed("#stream_graph_rain", spec4, {actions: false}).then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
 
-        vegaEmbed("#stream_graph_rain", spec5, {actions: false}).then(function (result) {
+        vegaEmbed("#donut_chart_rain", spec5, {actions: false}).then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
 
-        vegaEmbed("#donut_chart_rain", spec6, {actions: false}).then(function (result) {
-            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-        }).catch(console.error);
-
-        vegaEmbed("#donut_chart_temp", spec7, {actions: false}).then(function (result) {
+        vegaEmbed("#donut_chart_temp", spec6, {actions: false}).then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
     </script>

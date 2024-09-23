@@ -1,0 +1,78 @@
+body *{
+	font-family: 'Roboto', sans-serif;
+  }
+
+h1 {
+  font-size: 50px;
+  font-weight: 900;
+  color: darkgreen;
+  text-align: center;
+}
+
+p{
+  text-align: justify;
+  line-height: 1.5;
+}
+
+body {
+  background-color: #b2d9e3;
+}
+
+.page {
+  width: 1150px;
+  background-color: #9ac8d5;
+  margin: auto;
+  padding: 50px;
+  padding-top: 35px;
+}
+
+.h2-right {
+  text-align: right;
+  
+}
+
+.banner-container {
+    width: 100%; /* Make the container take up the full width of its parent */
+    text-align: center; /* Center the GIF horizontally */
+    padding: 0 1%; /* Add padding on the left and right sides */
+    box-sizing: border-box; /* Ensure padding is included in the container's total width */
+}
+
+.banner {
+    width: 100%; /* Scale GIF to the width of its container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure the GIF doesn't exceed the container's width */
+}
+
+
+.pure-g {
+	margin-bottom: 20px;
+    background-color: rgba(255,255,255,0.5);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.description h2,
+h1 {
+    margin-top: 0px;
+    color: #6fa7b7;
+    text-align: center;
+}
+
+.description-left {
+    margin-left: 20px;
+}
+  
+.description-right {
+    margin-right: 20px;
+}
+
+.visualisation-container {
+    background-color: #FFFFFF;
+	width: 100%;
+    border: 2px solid #9ac8d5;
+  }
+
+

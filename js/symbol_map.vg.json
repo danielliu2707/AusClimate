@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 1300,
-  "height": 500,
-  "title": "Average Temperatures Across Australian Weather Recordings (2010-2023)",
+  "width": "container",
+  "height": 400,
+  "title": {"text": "Average Temperatures Across Australian Weather Recordings (2010-2023)", "dy": -30, "font": "Roboto"},
 
   "params": [
     {
@@ -96,7 +96,9 @@
             "title": "Temperature (°C)",
             "values": [5, 10, 15, 20, 25, 30],
             "titleAnchor": "middle",
-            "titlePadding": 15
+            "titlePadding": 15,
+            "titleFont": "Roboto",
+            "labelFont": "Roboto"
           }
         },
         "size": {
@@ -106,7 +108,10 @@
             "title": "Total Rainfall (mm)",
             "format": ".1s",
             "titleAnchor": "middle",
-            "titlePadding": 13
+            "titlePadding": 13,
+            "titleFont": "Roboto",
+            "labelFont": "Roboto"
+
             },
           "scale": {
             "type": "threshold",
