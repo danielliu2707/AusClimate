@@ -16,7 +16,10 @@
   ],
   "layer": [
     {
-      "mark": "area",
+      "mark": {
+        "type": "area",
+        "strokeWidth": 2
+      },
       "encoding": {
         "x": {
           "timeUnit": "month", "field": "Month",
@@ -41,6 +44,15 @@
             "labelFontSize": 11
           }
         },
+        "stroke": {
+          "field": "officialnamestate",
+          "type": "nominal",
+          "scale": {
+            "domain": ["New South Wales", "Queensland", "South Australia", "Tasmania", "Territories", "Victoria", "Western Australia"],
+            "range": ["#3585bc", "#fe711a", "#856ef2", "#195f53", "#e685c8", "#97675d", "#2fc5d4"]
+          }
+        },
+        "opacity": {"value": 0.8},
         "tooltip": [
           {"field": "officialnamestate", "type": "nominal", "title": "State"},
           {"field": "TemperatureMean", "type": "nominal", "title": "Average Temperature (°C)", "format": ".2f"}
