@@ -1,16 +1,16 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 575,
-  "height": 500,
-  "title": {"text": "Change in Statewise Average Rainfall by Month (2023)", "dy": -30, "font": "Roboto"},
+  "width": "container",
+  "height": 400,
+  "title": {"text": "Change in Statewise Average Rainfall by Month (2023)", "dy": -30, "font": "Roboto", "fontSize": 20},
   "data": {"url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/refs/heads/main/data/state_rainfall.csv"},
   "transform": [
     {
-      "calculate": "datum.officialnamestate === 'Queensland' ? 'January was the wettest month across Australia, with the' : ''",
+      "calculate": "datum.officialnamestate === 'Queensland' ? 'January was the wettest month across Australia, with Queensland' : ''",
       "as": "Line1"
     },
     {
-      "calculate": "datum.officialnamestate === 'Queensland' ? 'Queensland floods contributing an average daily rainfall of 7.28 mm' : ''",
+      "calculate": "datum.officialnamestate === 'Queensland' ? 'floods contributing an average daily rainfall of 7.28 mm' : ''",
       "as": "Line2"
     }
   ],
@@ -23,7 +23,7 @@
       "encoding": {
         "x": {
           "timeUnit": "month", "field": "Month",
-          "axis": {"domain": false, "format": "%B", "tickSize": 0, "grid": false, "title": "Month", "titleFont": "Roboto"}
+          "axis": {"domain": false, "format": "%B", "tickSize": 0, "grid": false, "title": "Month", "titleFont": "Roboto", "labelFontSize": 14, "titleFontSize": 16, "labelPadding": 15, "titlePadding": 15}
         },
         "y": {
           "aggregate": "sum", "field": "RainSum",
@@ -41,7 +41,8 @@
             "title": "",
             "orient": "top",
             "labelFont": "Roboto",
-            "labelFontSize": 11
+            "labelFontSize": 15.5,
+            "columns": 4
           }
         },
         "stroke": {
@@ -81,8 +82,8 @@
               },
               "value": 0.2
             },
-            "x": {"value": 175},
-            "y": {"value": 30}
+            "x": {"value": 125},
+            "y": {"value": 32}
           }
         },
         {
@@ -105,8 +106,8 @@
               },
               "value": 0.2
             },
-            "x": {"value": 175},
-            "y": {"value": 45}
+            "x": {"value": 125},
+            "y": {"value": 47}
           }
         }
       ]
@@ -114,7 +115,7 @@
     {
       "mark": "rule",
       "encoding": {
-        "x": {"value": 160},
+        "x": {"value": 120},
         "x2": {"value": 70},
         "y": {"value": 40},
         "y2": {"value": 40},

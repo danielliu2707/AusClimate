@@ -46,7 +46,7 @@
             </div>
 
             <div class="pure-u-1-3">
-                <!-- Embedding of text for symbol map into webpage with 1/3rd space -->
+                <!-- Add text for symbol map into webpage with 1/3rd space -->
                 <div class="description description-left">
                     <h2>Temperature Records</h2>
                     <p>Insert 
@@ -59,14 +59,19 @@
             </div>
         </div>
 
+        <!-- Embedding of streamgraphs -->
         <div class="pure-g">
+            <!-- Add left column text -->
             <div class="pure-u-1-2">
               <div class="description description-left">
-                <h2>Insert Title Here</h2>
+                <div class="centered-title">
+                    <h2>Insert Title Here</h2>
+                </div>
                 <p>Insert Text Here</p>
               </div>
             </div>
-            <div class="pure-u-1-2"> <!-- Add a new column for description-right -->
+            <!-- Add right column text -->
+            <div class="pure-u-1-2">
               <div class="description description-right">
                 <h2><br></h2> 
                 <p>Insert Text <span class = "highlight-africa">Including Highlighted</span>Here.</p>
@@ -75,37 +80,61 @@
             <div class="pure-u-1-2">
               <div id="row_multiple_mortality" class="vis-container-long"></div>
             </div>
-        </div>
-
-        <div class="pure-g">
+            <!-- Embedding of first streamgraph for temperature -->
             <div class="pure-u-1-2">
-                <!-- Embedding of symbol map into webpage -->
-                <div id="donut_chart_rain" class="visualisation-container"></div>
+                <div id="stream_graph_temp" class="visualisation-container"></div>
+            </div>
+
+            <!-- Embedding of first streamgraph for temperature -->
+            <div class="pure-u-1-2">
+                <div id="stream_graph_rain" class="visualisation-container-left-streamgraph"></div>
             </div>
         </div>
 
+        <!-- Embedding of donut chart for temperatures -->
         <div class="pure-g">
-            <div class="pure-u-1-2">
-                <!-- Embedding of symbol map into webpage -->
+            <div class="pure-u-1-3">
+                <!-- Add text for symbol map into webpage with 1/3rd space -->
+                <div class="description description-left">
+                    <h2>Temperature Records</h2>
+                    <p>Insert 
+                    <br><br>
+                    Temperature.
+                    <br><br>
+                    Text Here.
+                  </p>
+                </div>
+            </div>
+            <div class="pure-u-2-3">
+                <!-- Embedding of donut chart into webpage with 2/3rd space -->
                 <div id="donut_chart_temp" class="visualisation-container"></div>
             </div>
         </div>
 
         <div class="pure-g">
-            <div class="pure-u-1-2">
-                <!-- Content for the first column -->
-                <p>Column 1</p>
-                <!-- Embedding of radial chart -->
-                <div id="stream_graph_rain" class="visualisation-container"></div>
+            <div class="pure-u-2-3">
+                <!-- Embedding of donut chart into webpage with 2/3rd space -->
+                <div id="donut_chart_rain" class="visualisation-container"></div>
             </div>
-            <div class="pure-u-1-2">
-                <!-- Content for the second column -->
-                <p>Column 2</p>
-                <div id="stream_graph_temp" class="visualisation-container"></div>
+
+            <div class="pure-u-1-3">
+                <!-- Add text for symbol map into webpage with 1/3rd space -->
+                <div class="description description-left">
+                    <h2>Temperature Records</h2>
+                    <p>Insert 
+                    <br><br>
+                    Temperature.
+                    <br><br>
+                    Text Here.
+                  </p>
+                </div>
             </div>
         </div>
+
+
+
         <div class="pure-g">
-            <div class="pure-u-1-2">
+            <div class="pure-u-1-1">
                 <p>Column 2</p>
                 <!-- Embedding of symbol map into webpage -->
                 <div id="scatterplot" class="visualisation-container"></div>

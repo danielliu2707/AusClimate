@@ -1,9 +1,14 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v3.0.json",
-  "width": 500,
-  "height": 500,
+  "width": 725,
+  "height": 400,
   "autosize": "pad",
-  "title": {"text": "Statewise Contribution to Total Rainfall (2010-2023)", "dy": -30, "font": "Roboto"},
+  "title": {
+    "text": "Statewise Contribution to Total Rainfall (2010-2023)",
+    "dy": -15,
+    "font": "Roboto",
+    "fontSize": 20
+  },
   "signals": [
     {"name": "startAngle", "value": 0},
     {"name": "endAngle", "value": 6.29},
@@ -92,7 +97,10 @@
     {
       "type": "text",
       "encode": {
-        "enter": {"fill": {"value": "#525252"}, "text": {"value": ""}},
+        "enter": {
+          "fill": {"value": "#525252"},
+          "text": {"value": ""}
+        },
         "update": {
           "opacity": {"value": 1},
           "x": {"signal": "width / 2"},
@@ -105,7 +113,6 @@
       }
     },
     {
-      "name": "mark_population",
       "type": "text",
       "from": {"data": "rainfallData"},
       "encode": {
@@ -113,8 +120,8 @@
           "text": {
             "signal": "if(datum['endAngle'] - datum['startAngle'] < 0.3, '', format(datum['RainProportion'], '.2f') + '%')"
           },
-          "x": {"signal": "if(width >= height, height, width) / 2"},
-          "y": {"signal": "if(width >= height, height, width) / 2"},
+          "x": {"signal": "width / 2"},
+          "y": {"signal": "height / 2"},
           "radius": {
             "signal": "if(selected && selected.officialnamestate == datum.officialnamestate, if(width >= height, height, width) / 2 * 1.05 * 0.65, if(width >= height, height, width) / 2 * 0.65)"
           },

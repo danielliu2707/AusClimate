@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 575,
-  "height": 500,
-  "title": {"text": "Change in Statewise Average Temperatures by Month (2023)", "dy": -30, "font": "Roboto"},
+  "width": "container",
+  "height": 400,
+  "title": {"text": "Change in Statewise Average Temp by Month (2023)", "dy": -30, "font": "Roboto", "fontSize": 20},
   "data": {"url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/main/data/state_temp.csv"},
   "transform": [
     {
@@ -23,7 +23,7 @@
       "encoding": {
         "x": {
           "timeUnit": "month", "field": "Month",
-          "axis": {"domain": false, "format": "%B", "tickSize": 0, "grid": false, "title": "Month","titleFont": "Roboto"}
+          "axis": {"domain": false, "format": "%B", "tickSize": 0, "grid": false, "title": "Month","titleFont": "Roboto", "labelFontSize": 14, "titleFontSize": 16, "labelPadding": 15, "titlePadding": 15}
         },
         "y": {
           "aggregate": "sum", "field": "TemperatureMean",
@@ -41,7 +41,8 @@
             "title": "",
             "orient": "top",
             "labelFont": "Roboto",
-            "labelFontSize": 11
+            "labelFontSize": 15.5,
+            "columns": 4
           }
         },
         "stroke": {
@@ -81,7 +82,7 @@
           },
           "value": 0.2
         },
-        "x": {"value": 195},
+        "x": {"value": 185},
         "y": {"value": 30}
       }
     },
@@ -105,7 +106,7 @@
           },
           "value": 0.2
         },
-        "x": {"value": 195},
+        "x": {"value": 185},
         "y": {"value": 45}
       }
     }
@@ -115,10 +116,10 @@
     {
       "mark": "rule",
       "encoding": {
-        "x": {"value": 310},
-        "x2": {"value": 310},
+        "x": {"value": 293},
+        "x2": {"value": 293},
         "y": {"value": 60},
-        "y2": {"value": 130},
+        "y2": {"value": 100},
         "color": {"value": "grey"},
         "strokeWidth": {"value": 2}
       }
@@ -133,8 +134,8 @@
         "angle": 180
       },
       "encoding": {
-        "x": {"value": 310},
-        "y": {"value": 130}
+        "x": {"value": 293},
+        "y": {"value": 103}
       }
     }
 

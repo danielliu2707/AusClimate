@@ -71,8 +71,22 @@ h1 {
 
 .visualisation-container {
     background-color: #FFFFFF;
-	width: 100%;
+	  width: 100%;
     border: 2px solid #9ac8d5;
   }
 
+.visualisation-container-left-streamgraph {
+    background-color: #FFFFFF;
+	  width: 100%;
+    border: 2px solid #9ac8d5;
+    position: relative;
+    margin-top: -900px;
+    top: -20px
+  }
+
+
+.centered-title {
+  margin-left: -367px;
+  color: #6fa7b7;
+}
 
