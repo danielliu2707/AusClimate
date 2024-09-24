@@ -1,0 +1,169 @@
+,officialnamestate,Month,variable,value
+0,New South Wales,1,TemperatureMean,23.354618142017813
+1,New South Wales,2,TemperatureMean,23.11714829059496
+2,New South Wales,3,TemperatureMean,21.85947259378789
+3,New South Wales,4,TemperatureMean,16.10581852925754
+4,New South Wales,5,TemperatureMean,11.320614287097822
+5,New South Wales,6,TemperatureMean,10.419023755237044
+6,New South Wales,7,TemperatureMean,10.17082432089604
+7,New South Wales,8,TemperatureMean,11.941666864217574
+8,New South Wales,9,TemperatureMean,15.960422001933487
+9,New South Wales,10,TemperatureMean,17.569790866475564
+10,New South Wales,11,TemperatureMean,20.618010802784223
+11,New South Wales,12,TemperatureMean,23.62837072586633
+12,Queensland,1,TemperatureMean,26.06572038757216
+13,Queensland,2,TemperatureMean,25.95676567150376
+14,Queensland,3,TemperatureMean,25.722981569066214
+15,Queensland,4,TemperatureMean,22.793911963929823
+16,Queensland,5,TemperatureMean,17.96241576533786
+17,Queensland,6,TemperatureMean,18.442518530477194
+18,Queensland,7,TemperatureMean,17.09886467183701
+19,Queensland,8,TemperatureMean,19.13269872544652
+20,Queensland,9,TemperatureMean,21.79664236508772
+21,Queensland,10,TemperatureMean,24.31477501599321
+22,Queensland,11,TemperatureMean,25.627111372842105
+23,Queensland,12,TemperatureMean,27.33092044563667
+24,South Australia,1,TemperatureMean,23.616798475628816
+25,South Australia,2,TemperatureMean,23.67021288475456
+26,South Australia,3,TemperatureMean,20.81845988460992
+27,South Australia,4,TemperatureMean,17.044683375110132
+28,South Australia,5,TemperatureMean,13.390502290464688
+29,South Australia,6,TemperatureMean,12.334732305433189
+30,South Australia,7,TemperatureMean,11.321093558462412
+31,South Australia,8,TemperatureMean,13.131781713073751
+32,South Australia,9,TemperatureMean,16.89327582201175
+33,South Australia,10,TemperatureMean,16.953046121500638
+34,South Australia,11,TemperatureMean,20.10163272856094
+35,South Australia,12,TemperatureMean,21.37033806181612
+36,Tasmania,1,TemperatureMean,16.186326540552994
+37,Tasmania,2,TemperatureMean,15.522564111451247
+38,Tasmania,3,TemperatureMean,13.620974105529951
+39,Tasmania,4,TemperatureMean,12.309221546574074
+40,Tasmania,5,TemperatureMean,9.46631779966206
+41,Tasmania,6,TemperatureMean,8.7848234116409
+42,Tasmania,7,TemperatureMean,9.225718936620584
+43,Tasmania,8,TemperatureMean,8.84825904094895
+44,Tasmania,9,TemperatureMean,10.363544753102646
+45,Tasmania,10,TemperatureMean,10.302148371003584
+46,Tasmania,11,TemperatureMean,13.030902573862434
+47,Tasmania,12,TemperatureMean,14.582978094009215
+48,Territories,1,TemperatureMean,27.513851880611902
+49,Territories,2,TemperatureMean,27.504867095360822
+50,Territories,3,TemperatureMean,27.75809721849019
+51,Territories,4,TemperatureMean,25.18522183549828
+52,Territories,5,TemperatureMean,20.615928256568008
+53,Territories,6,TemperatureMean,21.253359686907217
+54,Territories,7,TemperatureMean,19.586820479847024
+55,Territories,8,TemperatureMean,22.65169686351846
+56,Territories,9,TemperatureMean,25.5739489142268
+57,Territories,10,TemperatureMean,27.68829070305953
+58,Territories,11,TemperatureMean,29.12621409776632
+59,Territories,12,TemperatureMean,30.774267870302623
+60,Victoria,1,TemperatureMean,20.154756069797944
+61,Victoria,2,TemperatureMean,19.199504746302985
+62,Victoria,3,TemperatureMean,17.17012774406239
+63,Victoria,4,TemperatureMean,13.723941139870329
+64,Victoria,5,TemperatureMean,10.1652303180771
+65,Victoria,6,TemperatureMean,9.42458599170784
+66,Victoria,7,TemperatureMean,8.791213649344913
+67,Victoria,8,TemperatureMean,9.561649663915276
+68,Victoria,9,TemperatureMean,12.623093687496336
+69,Victoria,10,TemperatureMean,12.846242900788727
+70,Victoria,11,TemperatureMean,16.4753903296337
+71,Victoria,12,TemperatureMean,18.326330481761783
+72,Western Australia,1,TemperatureMean,25.189808831580542
+73,Western Australia,2,TemperatureMean,25.871464292207797
+74,Western Australia,3,TemperatureMean,23.96524113171201
+75,Western Australia,4,TemperatureMean,18.564805696969696
+76,Western Australia,5,TemperatureMean,16.731254102669634
+77,Western Australia,6,TemperatureMean,12.52049317064786
+78,Western Australia,7,TemperatureMean,13.12877303016483
+79,Western Australia,8,TemperatureMean,15.695335419455962
+80,Western Australia,9,TemperatureMean,18.793963005903866
+81,Western Australia,10,TemperatureMean,21.475320746081504
+82,Western Australia,11,TemperatureMean,23.737718660397075
+83,Western Australia,12,TemperatureMean,25.057825274951966
+84,New South Wales,1,RainSum,2.223591052874785
+85,New South Wales,2,RainSum,1.0039111729168049
+86,New South Wales,3,RainSum,2.52406257400494
+87,New South Wales,4,RainSum,1.6622737865761794
+88,New South Wales,5,RainSum,0.617027170654891
+89,New South Wales,6,RainSum,1.5204485727486463
+90,New South Wales,7,RainSum,0.73824564316144
+91,New South Wales,8,RainSum,0.8437841492290996
+92,New South Wales,9,RainSum,0.3303402943828306
+93,New South Wales,10,RainSum,1.2247137213082853
+94,New South Wales,11,RainSum,3.710935814566899
+95,New South Wales,12,RainSum,2.354861167018936
+96,Queensland,1,RainSum,7.277745339940238
+97,Queensland,2,RainSum,4.975436095892482
+98,Queensland,3,RainSum,3.867728359977589
+99,Queensland,4,RainSum,1.4624912303305262
+100,Queensland,5,RainSum,0.7918981354933786
+101,Queensland,6,RainSum,0.3582245637094736
+102,Queensland,7,RainSum,1.427334468689304
+103,Queensland,8,RainSum,0.2576298824488964
+104,Queensland,9,RainSum,0.2511157902877193
+105,Queensland,10,RainSum,0.2443395596495755
+106,Queensland,11,RainSum,2.987950884428772
+107,Queensland,12,RainSum,5.015164692505263
+108,South Australia,1,RainSum,0.8829046483771494
+109,South Australia,2,RainSum,0.4173222157992448
+110,South Australia,3,RainSum,0.7157595579238312
+111,South Australia,4,RainSum,1.4424522798164463
+112,South Australia,5,RainSum,0.7986073645331817
+113,South Australia,6,RainSum,2.2985609469427315
+114,South Australia,7,RainSum,0.7181327297911041
+115,South Australia,8,RainSum,0.8532755463606652
+116,South Australia,9,RainSum,0.5139941278428781
+117,South Australia,10,RainSum,0.4344749206124769
+118,South Australia,11,RainSum,0.9805433204508076
+119,South Australia,12,RainSum,1.973625127544408
+120,Tasmania,1,RainSum,1.5104966741372248
+121,Tasmania,2,RainSum,2.2553288101247166
+122,Tasmania,3,RainSum,3.191909890220174
+123,Tasmania,4,RainSum,2.3740211722910054
+124,Tasmania,5,RainSum,2.7784946343676395
+125,Tasmania,6,RainSum,4.289206359227514
+126,Tasmania,7,RainSum,2.9034306335995903
+127,Tasmania,8,RainSum,2.4162314479006657
+128,Tasmania,9,RainSum,1.9175661463809524
+129,Tasmania,10,RainSum,2.9889913077316947
+130,Tasmania,11,RainSum,1.5754497423862437
+131,Tasmania,12,RainSum,2.420634929078341
+132,Territories,1,RainSum,6.957731969547722
+133,Territories,2,RainSum,8.14035346974227
+134,Territories,3,RainSum,3.078117725427336
+135,Territories,4,RainSum,2.8603092796907217
+136,Territories,5,RainSum,0.0931825742168274
+137,Territories,6,RainSum,0.7382130599725086
+138,Territories,7,RainSum,0.3386764226837379
+139,Territories,8,RainSum,0.0566012638676421
+140,Territories,9,RainSum,0.1035395197525773
+141,Territories,10,RainSum,0.3678417038909212
+142,Territories,11,RainSum,2.401580769460481
+143,Territories,12,RainSum,2.561356830641836
+144,Victoria,1,RainSum,1.200744420538816
+145,Victoria,2,RainSum,1.0378336010145213
+146,Victoria,3,RainSum,1.954076574549805
+147,Victoria,4,RainSum,2.429010992003663
+148,Victoria,5,RainSum,1.7600319093856789
+149,Victoria,6,RainSum,3.2179670407146523
+150,Victoria,7,RainSum,1.1933002558099963
+151,Victoria,8,RainSum,1.5549450606043955
+152,Victoria,9,RainSum,0.9563186838717948
+153,Victoria,10,RainSum,2.628376466566821
+154,Victoria,11,RainSum,2.827161176031136
+155,Victoria,12,RainSum,3.244097842123361
+156,Western Australia,1,RainSum,1.1887754095560723
+157,Western Australia,2,RainSum,0.662214510455665
+158,Western Australia,3,RainSum,1.4709374087410254
+159,Western Australia,4,RainSum,1.0448066905130615
+160,Western Australia,5,RainSum,0.7897664094397816
+161,Western Australia,6,RainSum,1.5701358449582028
+162,Western Australia,7,RainSum,0.9489331617281828
+163,Western Australia,8,RainSum,1.045848925303873
+164,Western Australia,9,RainSum,0.7692058537638453
+165,Western Australia,10,RainSum,0.1798058457700475
+166,Western Australia,11,RainSum,0.680992688523511
+167,Western Australia,12,RainSum,0.2843462440509657
