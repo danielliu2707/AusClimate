@@ -11,7 +11,9 @@ h1 {
 
 p{
   text-align: justify;
-  line-height: 1.5;
+  line-height: 1.4;
+  word-spacing: normal;
+  
 }
 
 body {
@@ -86,7 +88,7 @@ h1 {
 
 
 .centered-title {
-  margin-left: -367px;
+  margin-left: -190px;
   color: #6fa7b7;
 }
 

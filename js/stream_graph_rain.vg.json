@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
   "height": 400,
-  "title": {"text": "Change in Statewise Average Rainfall by Month (2023)", "dy": -30, "font": "Roboto", "fontSize": 20},
+  "title": {"text": "Change in Statewise Average Rainfall by Month", "dy": -30, "font": "Roboto", "fontSize": 23},
   "data": {"url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/refs/heads/main/data/state_rainfall.csv"},
   "transform": [
     {

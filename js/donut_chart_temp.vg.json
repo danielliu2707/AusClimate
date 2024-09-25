@@ -3,7 +3,7 @@
   "width": 725,
   "height": 400,
   "autosize": "pad",
-  "title": {"text": "Statewise Contribution to Total Temperature (2010-2023)", "dy": -15, "font": "Roboto", "fontSize": 20},
+  "title": {"text": "Statewise Contribution to Total Temperature", "dy": -15, "font": "Roboto", "fontSize": 23},
   "signals": [
     {"name": "startAngle", "value": 0},
     {"name": "endAngle", "value": 6.29},

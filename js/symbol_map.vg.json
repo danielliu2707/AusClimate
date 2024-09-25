@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
   "height": 400,
-  "title": {"text": "Average Temperatures Across Australian Weather Recordings (2010-2023)", "dy": -30, "font": "Roboto"},
+  "title": {"text": "Average Temperatures Across Australian Weather Recordings", "dy": -30, "font": "Roboto", "fontSize": 22},
 
   "params": [
     {
@@ -89,7 +89,7 @@
           "type": "quantitative",
           "title": "Temperature",
           "scale": {
-            "scheme": "yelloworangered",
+            "scheme": "yellowgreenblue",
             "domain": [0, 5, 10, 15, 20, 25, 30]
           },
           "legend": {

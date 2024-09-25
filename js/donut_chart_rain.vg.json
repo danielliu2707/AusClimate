@@ -4,10 +4,10 @@
   "height": 400,
   "autosize": "pad",
   "title": {
-    "text": "Statewise Contribution to Total Rainfall (2010-2023)",
+    "text": "Statewise Contribution to Total Rainfall",
     "dy": -15,
     "font": "Roboto",
-    "fontSize": 20
+    "fontSize": 23
   },
   "signals": [
     {"name": "startAngle", "value": 0},
