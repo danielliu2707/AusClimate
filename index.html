@@ -70,15 +70,26 @@
                 <div class="centered-title">
                     <h2>Temperature & Rainfall by Month</h2>
                 </div>
-                <p>Additionally, the warmest months occur at the beginning and end of the year, while the coolest months fall in the middle,
-                    aligning with Australia's seasonal patterns.</p>
+                <p>Australia exhibits clear seasonal rainfall patterns, with significantly higher totals during the early and later months of 2023, primarily driven by extreme rainfall
+                    in <span class="highlight-queensland">Queensland</span> and the <span class="highlight-territories">Northern Territory</span>.
+                    These tropical regions are frequently affected by floods and cyclones which contribute to significant rainfall. While rainfall decreases in <span class="highlight-queensland">Queensland</span> and the
+                    <span class="highlight-territories">Northern Territory</span> towards the middle of the year, other states generally experience higher rainfall during the middle months,
+                    in part due to the effects of the Southern Ocean, which brings moist air masses during winter.</p>
               </div>
             </div>
             <!-- Add right column text -->
             <div class="pure-u-1-2">
               <div class="description description-left">
                 <h2><br></h2> 
-                <p>Insert Text <span class = "highlight-africa">Including Highlighted</span>Here.</p>
+                <p>There are also clear seasonal temperature patterns in Australia, with all states following a similar trend.
+                    The warmest months typically occur at the beginning and end of the year, while the coolest months fall in the middle,
+                    aligning with Australia’s summer and winter.
+
+                    However, temperature variations can be more extreme in different states. The northern parts such as 
+                    <span class="highlight-queensland">Queensland</span> and the <span class="highlight-territories">Northern Territory</span>
+                    experience consistently high temperatures while southern states such as
+                    <span class="highlight-victoria">Victoria</span> and <span class="highlight-nsw">New South Wales</span> experience greater variations in temperature throughout the year.
+                </p>
               </div>
             </div>
             <div class="pure-u-1-2">
@@ -95,18 +106,21 @@
             </div>
         </div>
 
+
         <!-- Embedding of donut chart for temperatures -->
         <div class="pure-g">
             <div class="pure-u-1-3">
                 <!-- Add text for symbol map into webpage with 1/3rd space -->
-                <div class="description description-left">
-                    <h2>Temperature Records</h2>
-                    <p>Insert 
-                    <br><br>
-                    Temperature.
-                    <br><br>
-                    Text Here.
-                  </p>
+                <div class="description description-right">
+                    <h2>Temperature Contributions<br>By State</h2>
+                    <p>Scrolling through the months of the pie chart, it is evident that the contribution to the total temperature in Australia by each state is relatively uniform,
+                        with all states contributing to at least 8% of total temperature in any given month. However, it is evident that the earlier months which coincide with summer exhibit
+                        less variation between the temperatures of the states with the highest contributor to temperature in January of 2023 being the Northern Territory with 27.51% and
+                        the lowest contributor being Tasmania with 16.19%. 
+
+                        However, the middle months which coincide with winter exhibit greater temperature contribution ranges by the states as the higher contributor to temperature in August of 2023
+                        being the Norther Territory with 22.65% and the lowest contributor being significantly less at 8.85%.
+                    </p>
                 </div>
             </div>
             <div class="pure-u-2-3">
@@ -125,13 +139,20 @@
             <div class="pure-u-1-3">
                 <!-- Add text for symbol map into webpage with 1/3rd space -->
                 <div class="description description-left">
-                    <h2>Temperature Records</h2>
-                    <p>Insert 
-                    <br><br>
-                    Temperature.
-                    <br><br>
-                    Text Here.
-                  </p>
+                    <h2>Rainfall Contributions<br>By State</h2>
+
+
+                    <p>
+                        The donut chart effectively illustrates the proportional contribution of each state to Australia’s total rainfall in 2023. 
+                        A notable contributor was <span class="highlight-queensland">Queensland</span>, who had the highest rainfall in January, contributing 46.90% of the national total.
+                    </p>
+                    <p>
+                        As you scroll through the months, it becomes clear that rainfall distribution becomes more even throughout Australia.
+                        By August 2023, every state except the <span class="highlight-territories">Northern Territory</span> contributed to at least 9% of the total rainfall,
+                        compared to only two states achieving this in March 2023. This shift indicates a more balanced distribution of rainfall across Australia during the winter months,
+                        compared to the uneven distribution of rainfall across states like <span class="highlight-queensland">Queensland</span> during summer.
+                    </p>
+                    
                 </div>
             </div>
         </div>
@@ -144,7 +165,11 @@
                 <div id="scatterplot" class="visualisation-container"></div>
             </div>
         </div>
+        
+        <p>Designed by Daniel Liu, 2024</p>
+        <p>Data Sources: <a href="https://github.com/open-meteo/open-meteo">Open Meteo API</a>, <a href="https://www.kaggle.com/datasets/nadzmiagthomas/australia-weather-data-2000-2024/data">Australian Weather Data</a></p>
     </div>
+
 
     <!-- Renders visualizations into HTML elements -->
     <script type="text/javascript">

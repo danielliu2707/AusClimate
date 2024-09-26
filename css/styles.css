@@ -92,3 +92,22 @@ h1 {
   color: #6fa7b7;
 }
 
+.highlight-queensland {
+  background-color: #ff9a4d;
+  color: black;
+}
+
+.highlight-territories {
+  background-color: #f0a3d7;
+  color: black;
+}
+
+.highlight-victoria {
+  background-color: #d1b9a5;
+  color: black;
+}
+
+.highlight-nsw {
+  background-color: #9cc8e3;
+  color: black;
+}
