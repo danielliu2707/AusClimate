@@ -92,6 +92,11 @@ h1 {
   color: #6fa7b7;
 }
 
+.centered-title-2 {
+  margin-left: -51px;
+  color: #6fa7b7;
+}
+
 .highlight-queensland {
   background-color: #ff9a4d;
   color: black;
@@ -109,5 +114,10 @@ h1 {
 
 .highlight-nsw {
   background-color: #9cc8e3;
+  color: black;
+}
+
+.highlight-tas {
+  background-color: #4dbb9e;
   color: black;
 }

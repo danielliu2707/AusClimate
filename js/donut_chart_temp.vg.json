@@ -16,7 +16,7 @@
   "data": [
     {
       "name": "temperatureData",
-      "url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/refs/heads/main/data/state_temp.csv",
+      "url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/refs/heads/main/data/state_proportional_temp.csv",
       "format": {"type": "csv"},
       "transform": [
         {
@@ -25,7 +25,7 @@
         },
         {
           "type": "pie",
-          "field": "TemperatureMean",
+          "field": "ProportionalTemp",
           "startAngle": {"signal": "startAngle"},
           "endAngle": {"signal": "endAngle"},
           "sort": {"signal": "sort"}
@@ -38,7 +38,7 @@
       "transform": [
         {
           "type": "aggregate",
-          "fields": ["TemperatureMean"],
+          "fields": ["ProportionalTemp"],
           "ops": ["sum"],
           "as": ["sum"]
         }
@@ -63,7 +63,7 @@
           "x": {"signal": "width / 2"},
           "y": {"signal": "height / 2"},
           "tooltip": {
-            "signal": "{'State': datum.officialnamestate, 'Temperature Contribution': format(datum['TemperatureMean'], '.2f') + '%'}"
+            "signal": "{'State': datum.officialnamestate, 'Temperature Contribution': format(datum['ProportionalTemp'], '.2f') + '%'}"
           }
         },
         "update": {
@@ -111,7 +111,7 @@
       "encode": {
         "enter": {
           "text": {
-            "signal": "if(datum['endAngle'] - datum['startAngle'] < 0.3, '', format(datum['TemperatureMean'], '.2f') + '%')"
+            "signal": "if(datum['endAngle'] - datum['startAngle'] < 0.3, '', format(datum['ProportionalTemp'], '.2f') + '%')"
           },
           "x": {"signal": "width / 2"},
           "y": {"signal": "height / 2"},
