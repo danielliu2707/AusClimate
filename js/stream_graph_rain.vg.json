@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
-  "height": 400,
+  "height": 380,
   "title": {"text": "Change in Statewise Average Rainfall by Month", "dy": -30, "font": "Roboto", "fontSize": 23},
   "data": {"url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/refs/heads/main/data/state_rainfall.csv"},
   "transform": [
@@ -22,8 +22,10 @@
       },
       "encoding": {
         "x": {
-          "timeUnit": "month", "field": "Month",
-          "axis": {"domain": false, "format": "%B", "tickSize": 0, "grid": false, "title": "Month", "titleFont": "Roboto", "labelFontSize": 14, "titleFontSize": 16, "labelPadding": 15, "titlePadding": 15}
+          "field": "Month_Abbr",
+          "type": "ordinal",
+          "sort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+          "axis": {"domain": false, "tickSize": 0, "grid": false, "title": "Month", "titleFont": "Roboto", "labelFontSize": 14, "titleFontSize": 16, "labelPadding": 15, "titlePadding": 15}
         },
         "y": {
           "aggregate": "sum", "field": "RainSum",
@@ -41,7 +43,7 @@
             "title": "",
             "orient": "top",
             "labelFont": "Roboto",
-            "labelFontSize": 15.5,
+            "labelFontSize": 16.5,
             "columns": 4
           }
         },
@@ -56,6 +58,7 @@
         "opacity": {"value": 0.8},
         "tooltip": [
           {"field": "officialnamestate", "type": "nominal", "title": "State"},
+          {"field": "Month_Full", "type": "ordinal", "title": "Month"},
           {"field": "RainSum", "type": "nominal", "title": "Average Rainfall (mm)", "format": ".2f"}
         ]
       }
@@ -83,7 +86,7 @@
               "value": 0.2
             },
             "x": {"value": 125},
-            "y": {"value": 32}
+            "y": {"value": 15}
           }
         },
         {
@@ -107,7 +110,7 @@
               "value": 0.2
             },
             "x": {"value": 125},
-            "y": {"value": 47}
+            "y": {"value": 30}
           }
         }
       ]
@@ -117,8 +120,8 @@
       "encoding": {
         "x": {"value": 120},
         "x2": {"value": 70},
-        "y": {"value": 40},
-        "y2": {"value": 40},
+        "y": {"value": 23},
+        "y2": {"value": 23},
         "color": {"value": "grey"},
         "strokeWidth": {"value": 1}
       }
@@ -133,8 +136,8 @@
         "angle": 180
       },
       "encoding": {
-        "x": {"value": 70},
-        "y": {"value": 40},
+        "x": {"value": 67},
+        "y": {"value": 23},
         "angle": {"value": 36}
       }
     }

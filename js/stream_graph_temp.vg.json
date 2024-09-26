@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
-  "height": 400,
+  "height": 380,
   "title": {"text": "Change in Statewise Average Temp by Month", "dy": -30, "font": "Roboto", "fontSize": 23},
   "data": {"url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/main/data/state_temp.csv"},
   "transform": [
@@ -22,8 +22,10 @@
       },
       "encoding": {
         "x": {
-          "timeUnit": "month", "field": "Month",
-          "axis": {"domain": false, "format": "%B", "tickSize": 0, "grid": false, "title": "Month","titleFont": "Roboto", "labelFontSize": 14, "titleFontSize": 16, "labelPadding": 15, "titlePadding": 15}
+          "field": "Month_Abbr",
+          "type": "ordinal",
+          "sort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+          "axis": {"domain": false, "tickSize": 0, "grid": false, "title": "Month","titleFont": "Roboto", "labelFontSize": 14, "titleFontSize": 16, "labelPadding": 15, "titlePadding": 15}
         },
         "y": {
           "aggregate": "sum", "field": "TemperatureMean",
@@ -41,7 +43,7 @@
             "title": "",
             "orient": "top",
             "labelFont": "Roboto",
-            "labelFontSize": 15.5,
+            "labelFontSize": 16.5,
             "columns": 4
           }
         },
@@ -56,6 +58,7 @@
         "opacity": {"value": 0.8},
         "tooltip": [
           {"field": "officialnamestate", "type": "nominal", "title": "State"},
+          {"field": "Month_Full", "type": "ordinal", "title": "Month"},
           {"field": "TemperatureMean", "type": "nominal", "title": "Average Temperature (°C)", "format": ".2f"}
         ]
       }
