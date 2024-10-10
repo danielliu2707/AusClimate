@@ -3,7 +3,6 @@
   "width": 725,
   "height": 400,
   "autosize": "pad",
-  "title": {"text": "Statewise Contribution to Total Temperature", "dy": -15, "font": "Roboto", "fontSize": 23},
   "signals": [
     {"name": "startAngle", "value": 0},
     {"name": "endAngle", "value": 6.29},
@@ -92,7 +91,7 @@
     {
       "type": "text",
       "encode": {
-        "enter": {"fill": {"value": "#525252"}, "text": {"value": ""}},
+        "enter": {"fill": {"value": "black"}, "text": {"value": ""}},
         "update": {
           "opacity": {"value": 1},
           "x": {"signal": "width / 2"},
@@ -100,7 +99,7 @@
           "align": {"value": "center"},
           "baseline": {"value": "middle"},
           "fontSize": {"signal": "if(width >= height, height, width) * 0.05"},
-          "text": {"value": "Temperature"}
+          "text": {"value": "Temperature by State"}
         }
       }
     },

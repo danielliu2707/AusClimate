@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
   "height": 350,
-  "title": {"text": "Average Temperature vs Proportional Rainfall by State", "dy": -30, "font": "Roboto", "fontSize": 25},
+  "title": {"text": "Average Temperature vs Proportional Rainfall by State", "dy": -20, "font": "Roboto", "fontSize": 25},
   "data": {
     "url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/main/data/state_temp_rain_humid.csv"
   },
@@ -67,13 +67,13 @@
             "domain": [40, 50, 60, 70, 80],
             "range": [50, 150, 250, 400, 450, 600]
           },
-          "legend": {"orient": "bottom", "labelFont": "Roboto", "labelFontSize": 15.5}
+          "legend": {"orient": "bottom", "labelFont": "Roboto", "labelFontSize": 12.5}
         },
         "x": {
           "field": "TemperatureMean",
           "title": "Average Temperature",
           "type": "quantitative",
-          "axis": {"tickCount": 8, "labelFontSize": 14, "titleFontSize": 16, "labelPadding": 15, "titlePadding": 15},
+          "axis": {"tickCount": 8, "labelFontSize": 12, "titleFontSize": 13, "labelPadding": 15, "titlePadding": 15},
           "scale": {"domain": [5, 35]}
           
         },
@@ -81,7 +81,7 @@
           "field": "RainProportion",
           "type": "quantitative",
           "title": "Proportional Rainfall",
-          "axis": {"tickCount": 6, "labelFontSize": 14, "titleFontSize": 16, "labelPadding": 15, "titlePadding": 15},
+          "axis": {"tickCount": 6, "labelFontSize": 12, "titleFontSize": 13, "labelPadding": 15, "titlePadding": 15},
           "scale": {"domain": [0, 50]}
         },
         "color": {
@@ -114,7 +114,7 @@
         "align": "left",
         "baseline": "middle",
         "dx": 10,
-        "fontSize": 11,
+        "fontSize": 13,
         "fontStyle": "italic",
         "color": "grey"
       },
@@ -138,7 +138,7 @@
         "align": "left",
         "baseline": "middle",
         "dx": 10,
-        "fontSize": 11,
+        "fontSize": 13,
         "fontStyle": "italic",
         "color": "grey"
       },

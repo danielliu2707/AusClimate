@@ -48,18 +48,19 @@ body {
 
 
 .pure-g {
-	margin-bottom: 20px;
+	  margin-bottom: 20px;
     background-color: rgba(255,255,255,0.5);
     padding-top: 20px;
     padding-bottom: 20px;
     padding-right: 20px;
     padding-left: 20px;
+    border-radius: 10px
 }
 
 .description h2,
 h1 {
     margin-top: 0px;
-    color: #6fa7b7;
+    color: black;
     text-align: center;
 }
 
@@ -120,4 +121,38 @@ h1 {
 .highlight-tas {
   background-color: #4dbb9e;
   color: black;
+}
+
+.warm-temp {
+  position: absolute;
+  top: 2095px;
+  left: 580px;
+  width: 150px; 
+  height: 150px;
+}
+
+.cool-temp {
+  position: absolute;
+  top: 2095px;
+  left: 1105px;
+  width: 150px; 
+  height: 150px;
+}
+
+.rainy-weather {
+  position: absolute;
+  top: 2610px;
+  left: 210px;
+  width: 150px; 
+  height: 150px;
+  z-index: 10;
+}
+
+.dry-weather {
+  position: absolute;
+  top: 2610px;
+  left: 735px;
+  width: 150px; 
+  height: 150px;
+  z-index: 10;
 }

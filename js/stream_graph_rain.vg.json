@@ -25,7 +25,7 @@
           "field": "Month_Abbr",
           "type": "ordinal",
           "sort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-          "axis": {"domain": false, "tickSize": 0, "grid": false, "title": "Month", "titleFont": "Roboto", "labelFontSize": 14, "titleFontSize": 16, "labelPadding": 15, "titlePadding": 15}
+          "axis": {"domain": false, "tickSize": 0, "grid": false, "title": "Month", "titleFont": "Roboto", "labelFontSize": 11, "titleFontSize": 12, "labelPadding": 15, "titlePadding": 15}
         },
         "y": {
           "aggregate": "sum", "field": "RainSum",
@@ -71,7 +71,7 @@
             "align": "left",
             "baseline": "middle",
             "dx": 10,
-            "fontSize": 11,
+            "fontSize": 12.5,
             "fontStyle": "italic",
             "color": "grey"
           },
@@ -95,7 +95,7 @@
             "align": "left",
             "baseline": "middle",
             "dx": 10,
-            "fontSize": 11,
+            "fontSize": 12.5,
             "fontStyle": "italic",
             "color": "grey"
           },

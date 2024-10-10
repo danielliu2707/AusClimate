@@ -3,12 +3,6 @@
   "width": 725,
   "height": 400,
   "autosize": "pad",
-  "title": {
-    "text": "Statewise Contribution to Total Rainfall",
-    "dy": -15,
-    "font": "Roboto",
-    "fontSize": 23
-  },
   "signals": [
     {"name": "startAngle", "value": 0},
     {"name": "endAngle", "value": 6.29},
@@ -98,7 +92,7 @@
       "type": "text",
       "encode": {
         "enter": {
-          "fill": {"value": "#525252"},
+          "fill": {"value": "black"},
           "text": {"value": ""}
         },
         "update": {
@@ -108,7 +102,7 @@
           "align": {"value": "center"},
           "baseline": {"value": "middle"},
           "fontSize": {"signal": "if(width >= height, height, width) * 0.05"},
-          "text": {"value": "Rainfall"}
+          "text": {"value": "Rainfall by State"}
         }
       }
     },
