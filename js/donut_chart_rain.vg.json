@@ -126,6 +126,28 @@
           "baseline": {"value": "middle"}
         }
       }
+    },
+    {"type": "image",
+    "encode": {
+     "enter": {
+       "url": {"value": "https://raw.githubusercontent.com/danielliu2707/FIT3179/refs/heads/main/img/dry.svg"},
+       "x": {"value": 558},
+       "y": {"value": 115},
+       "width": {"value": 150},
+       "height": {"value": 150}
+     }
     }
+   },
+   {"type": "image",
+    "encode": {
+     "enter": {
+       "url": {"value": "https://raw.githubusercontent.com/danielliu2707/FIT3179/refs/heads/main/img/rainy.svg"},
+       "x": {"value": 25},
+       "y": {"value": 125},
+       "width": {"value": 145},
+       "height": {"value": 145}
+     }
+    }
+   }
   ]
 }
