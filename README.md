@@ -8,7 +8,7 @@ AusClimate is a dashboard that uncovers Australia’s unique weather patterns to
 
 With a few clicks, you'll explore insights on temperature, rainfall, and more across Australia’s regions! ☀️
 
----
+<br>
 
 ## Live Demo
 
