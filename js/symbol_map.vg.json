@@ -62,11 +62,23 @@
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/main/js/aus_states.topojson",
-        "format": {"type": "topojson", "feature": "collection"}
+        "url": "https://raw.githubusercontent.com/danielliu2707/AusClimate/refs/heads/main/js/aus_graticules_3.json",
+        "format": {"type": "topojson", "feature": "STE_2016_AUST"}
       },
       "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
     },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/danielliu2707/AusClimate/refs/heads/main/js/aus_graticules_3.json",
+        "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
+      },
+      "mark": {"type": "geoshape", "fill": "none", "stroke": "gray", "strokeWidth": 0.5}
+    },
+
+
+
+
+    
     {
       "data": {
         "url": "https://raw.githubusercontent.com/danielliu2707/FIT3179/main/data/weather_final_map_data.csv"
